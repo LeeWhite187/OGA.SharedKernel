@@ -3,7 +3,7 @@ Base Shared Libraries for various project types.
 
 ## Installation
 
-OGA.SharedKerne. is available via NuGet & is included in every template:
+OGA.SharedKernel is available via NuGet:
 
 * NuGet Official Releases: [![NuGet](https://img.shields.io/nuget/vpre/OGA.SharedKernel.svg?label=NuGet)](https://www.nuget.org/packages/OGA.SharedKernel)
 
@@ -12,12 +12,14 @@ OGA.SharedKerne. is available via NuGet & is included in every template:
 
 This library is built with the new SDK-style projects.
 It contains multiple projects, one for each of the following frameworks:
-  NET Framework 4.5.2
-  NET Framework 4.7
-  NET 5
-  NET 6
+    NET Framework 4.5.2
+    NET Framework 4.7
+    NET 5
+    NET 6
+And, the output nuget package includes runtimes targets for:
+    linux-64
+    win-x64
 
-It is compatible with linux-64 and Win-x64 runtimes.
 
 ## Visual Studio
 
