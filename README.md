@@ -11,7 +11,13 @@ Xamarin.Essentials is available via NuGet & is included in every template:
 ## Building OGA.SharedKernel
 
 This lbirary is built with the new SDK-style projects.
-It contains multiple projects, one for each target NET Framework: 4.5.2, 4.7, 5, 6.
+It contains multiple projects, one for each of the following frameworks:
+  NET Framework 4.5.2
+  NET Framework 4.7
+  NET 5
+  NET 6
+
+It is compatible with linux-64 and Win-x64 runtimes.
 
 ## Visual Studio
 
