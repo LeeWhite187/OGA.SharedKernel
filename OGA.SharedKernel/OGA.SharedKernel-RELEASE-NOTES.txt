@@ -1,43 +1,4 @@
-Type:			Project Release Notes
-For:			Shared Kernel Library
-Date:			20230217
-Description:	This is the lowest layer library of standardized classes used by all other libraries.
-				This library is composed of classes and elements taken fromn the common libraries, to serve as
-				a bottom layer that is thin enough to be used by the Domain Base libraries.
-				This allows any assembly in a process to use this library without pollution.
-				Specifically, this library was put together to be the exclusive reference for any Domain library,
-				allowing the domain logic to be free of other assembly references.
-				This library includes the following classes and elements that can be consumed:
-					Date Time Utility extension class for truncating timestamps as needed for compatibility across backends.
-					Some attribute classes used to decorate entities and other classes.
-					App Path class, for global acesss to app path data within a runtime.
-					Build Data class, for global acesss to process build data within a runtime.
-					A set of base exceptions and business exceptions that can be used by all project types.
-					A logging base to make logging accessible at the lowest layer of a project, the domain entity layer.
-					The App Data class was moved here, so that all layers of a process can access it.
-					The Stacktrace class is here, which can be used to provide additional callsite metadata
-					for logging diagnostic messages, when a PDB is not present with process binaries.
-					The Pagination Filter class is here, which allows result pagination to occur at the domain layer.
-					Service interfaces, are here, such as the URI service.
-					Global constants class for exposing company and application metadata to the entire process stack.
-					A Return Data class, that allows a method to return a result and a message without a REF or OUT argument.
-
-Targets:		The following compiled targets are available:
-					.NET 6
-					.NET 5
-					.NET 4.7
-					.NET 4.5.2
-Dependencies:	.NET 6.0 or .NET 5.0 or .NET 4.5.2 or .NET 4.7
-				NLog.Web.AspNetCore v5.0.0
-Repo_URL:		git@github.com:LeeWhite187/OGA.SharedKernel.git
-Source_Path:	OGA.SharedKernel/OGA.SharedKernel_SP
-Binary_URLs:	http://192.168.1.161:8080/packages/OGA.SharedKernel
-----------------------------------------
-Pending Changes:
-	Include in next release version...
-		1.	Revised namespaces across project to make it: OGA.SharedKernel, instead of: OGA_SharedKernel
-----------------------------------------
-Current:
+Older revision history:
 	Release:	v1.3.1
 	Date:		20220930
 	Build:		13

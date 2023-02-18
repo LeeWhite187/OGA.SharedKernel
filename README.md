@@ -1,15 +1,30 @@
 # OGA.SharedKernel
 Base Shared Libraries for various project types.
 
+## Description
+This is the lowest layer library of standardized classes used by all other libraries.
+This library is composed of classes and elements taken fromn the common libraries, to serve as a bottom layer that is thin enough to be used by the Domain Base libraries.
+This allows any assembly in a process to use this library without pollution.
+Specifically, this library was put together to be the exclusive reference for any Domain library, allowing the domain logic to be free of other assembly references.
+This library includes the following classes and elements that can be consumed:
+* Date Time Utility extension class for truncating timestamps as needed for compatibility across backends.
+* Some attribute classes used to decorate entities and other classes.
+* App Path class, for global acesss to app path data within a runtime.
+* Build Data class, for global acesss to process build data within a runtime.
+* A set of base exceptions and business exceptions that can be used by all project types.
+* A logging base to make logging accessible at the lowest layer of a project, the domain entity layer.
+* The App Data class was moved here, so that all layers of a process can access it.
+* The Stacktrace class is here, which can be used to provide additional callsite metadata for logging diagnostic messages, when a PDB is not present with process binaries.
+* The Pagination Filter class is here, which allows result pagination to occur at the domain layer.
+* Service interfaces, are here, such as the URI service.
+* Global constants class for exposing company and application metadata to the entire process stack.
+* A Return Data class, that allows a method to return a result and a message without a REF or OUT argument.
+
 ## Installation
-
 OGA.SharedKernel is available via NuGet:
-
 * NuGet Official Releases: [![NuGet](https://img.shields.io/nuget/vpre/OGA.SharedKernel.svg?label=NuGet)](https://www.nuget.org/packages/OGA.SharedKernel)
 
-
 ## Building OGA.SharedKernel
-
 This library is built with the new SDK-style projects.
 It contains multiple projects, one for each of the following frameworks:
 * NET Framework 4.5.2
@@ -21,11 +36,8 @@ And, the output nuget package includes runtimes targets for:
 * linux-64
 * win-x64
 
-
 ## Visual Studio
-
 It is currently built using Visual Studio 2019 17.1.
 
 ## License
-
 Please see the [License](LICENSE).
