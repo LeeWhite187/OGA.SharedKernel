@@ -3,14 +3,14 @@ Base Shared Libraries for various project types.
 
 ## Installation
 
-Xamarin.Essentials is available via NuGet & is included in every template:
+OGA.SharedKerne. is available via NuGet & is included in every template:
 
 * NuGet Official Releases: [![NuGet](https://img.shields.io/nuget/vpre/OGA.SharedKernel.svg?label=NuGet)](https://www.nuget.org/packages/OGA.SharedKernel)
 
 
 ## Building OGA.SharedKernel
 
-This lbirary is built with the new SDK-style projects.
+This library is built with the new SDK-style projects.
 It contains multiple projects, one for each of the following frameworks:
   NET Framework 4.5.2
   NET Framework 4.7
