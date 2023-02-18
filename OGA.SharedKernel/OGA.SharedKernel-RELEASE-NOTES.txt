@@ -1,0 +1,130 @@
+Type:			Project Release Notes
+For:			Shared Kernel Library
+Date:			20230217
+Description:	This is the lowest layer library of standardized classes used by all other libraries.
+				This library is composed of classes and elements taken fromn the common libraries, to serve as
+				a bottom layer that is thin enough to be used by the Domain Base libraries.
+				This allows any assembly in a process to use this library without pollution.
+				Specifically, this library was put together to be the exclusive reference for any Domain library,
+				allowing the domain logic to be free of other assembly references.
+				This library includes the following classes and elements that can be consumed:
+					Date Time Utility extension class for truncating timestamps as needed for compatibility across backends.
+					Some attribute classes used to decorate entities and other classes.
+					App Path class, for global acesss to app path data within a runtime.
+					Build Data class, for global acesss to process build data within a runtime.
+					A set of base exceptions and business exceptions that can be used by all project types.
+					A logging base to make logging accessible at the lowest layer of a project, the domain entity layer.
+					The App Data class was moved here, so that all layers of a process can access it.
+					The Stacktrace class is here, which can be used to provide additional callsite metadata
+					for logging diagnostic messages, when a PDB is not present with process binaries.
+					The Pagination Filter class is here, which allows result pagination to occur at the domain layer.
+					Service interfaces, are here, such as the URI service.
+					Global constants class for exposing company and application metadata to the entire process stack.
+					A Return Data class, that allows a method to return a result and a message without a REF or OUT argument.
+
+Targets:		The following compiled targets are available:
+					.NET 6
+					.NET 5
+					.NET 4.7
+					.NET 4.5.2
+Dependencies:	.NET 6.0 or .NET 5.0 or .NET 4.5.2 or .NET 4.7
+				NLog.Web.AspNetCore v5.0.0
+Repo_URL:		git@github.com:LeeWhite187/OGA.SharedKernel.git
+Source_Path:	OGA.SharedKernel/OGA.SharedKernel_SP
+Binary_URLs:	http://192.168.1.161:8080/packages/OGA.SharedKernel
+----------------------------------------
+Pending Changes:
+	Include in next release version...
+		1.	Revised namespaces across project to make it: OGA.SharedKernel, instead of: OGA_SharedKernel
+----------------------------------------
+Current:
+	Release:	v1.3.1
+	Date:		20220930
+	Build:		13
+	Changes:
+		1.	Revised namespaces across project to make it: OGA.SharedKernel, instead of: OGA_SharedKernel
+		2.	Added additional compile target for NET framework v4.7.
+
+	Release:	v1.3.0
+	Date:		20220929
+	Build:		12
+	Changes:
+		1.	Revised namespaces across project to make it: OGA.SharedKernel, instead of: OGA_SharedKernel
+
+	Release:	v1.2.2
+	Date:		20220927
+	Build:		11
+	Changes:
+		1.	Repackaged library in single nuget package, containing all versions and runtimes.
+
+	Release:	v1.2.1
+	Date:		20220927
+	Build:		11
+	Changes:
+		1.	Repackaged library in single nuget package, containing all versions and runtimes.
+		2.	Added InstallID (GUID) to the AppData class, so it can be globally-accessible.
+			This value can be used to determine the particular install instance of an application, as it should be set on deployment to a target machine.
+		3.	Added Net 6 compiled target.
+			This new target retains the same version number as the active Net 5 library.
+		4.	Added helper method to the logging base class, that will return a caller's method name.
+			This can be used to easily include method names in a log message without reflection.
+
+	Release:	v1.2.0
+	Date:		20220921
+	Build:		10
+	Changes:
+		1.	Added InstallID (GUID) to the AppData class, so it can be globally-accessible.
+			This value can be used to determine the particular install instance of an application, as it should be set on deployment to a target machine.
+		2.	Added Net 6 compiled target.
+			This new target retains the same version number as the active Net 5 library.
+		3.	Added helper method to the logging base class, that will return a caller's method name.
+			This can be used to easily include method names in a log message without reflection.
+
+	Release:	v1.1.1
+	Date:		20220625
+	Build:		9
+	Changes:
+		1.	Added InstallID (GUID) to the AppData class, so it can be globally-accessible.
+			This value can be used to determine the particular install instance of an application, as it should be set on deployment to a target machine.
+		2.	Added Net 6 compiled target.
+			This new target retains the same version number as the active Net 5 library.
+		3.	Created the NET 6 library target, and had to recompile the library to fix a preprocessor directive issue.
+----------------------------------------
+History:
+	Release:	v1.0.3
+	Date:		20211215
+	Build:		7
+	Changes:
+		1.	Added cStackTrace class to assembly.
+			This class provides the ability to create a stack trace with frames that include filename and line number data, if a usable PDB file is present for an assembly.
+			Or, for stack frames that don't have a usable PDB for their assembly, it will create a frame entry that has the module token and IL Offset.
+			These latter two values maintain traceability to the source file for an assembly, in case the PDB is not shipped, or is the wrong version.
+			The module token and IL Offset values can be used in a query of a PDB file, that's been coverted to XML, using the pdb2xml tool.
+			Download the pdb2xml converter tool from MSDN: http://www.microsoft.com/downloads/details.aspx?familyid=38449a42-6b7a-4e28-80ce-c55645ab1310&displaylang=en
+
+	Release:	v1.0.2
+	Date:		20211213
+	Build:		5
+	Changes:
+		1.	Updated to add Not Found exception.
+
+	Release:	v1.0.1
+	Date:		20211212
+	Build:		4
+	Changes:
+		No actual updates in this version.
+		The version was incremented to test the nuget pipeline.
+
+	Release:	v1.0.0
+	Date:		20211212
+	Build:		3
+	Changes:
+		No actual updates in this version.
+		This version was incremented to test the nuget pipeline.
+
+	Release:	v1.0.0-build2
+	Date:		20211212
+	Build:		2
+	Changes:
+		No actual updates in this version.
+		This version was created to test the nuget pipeline.

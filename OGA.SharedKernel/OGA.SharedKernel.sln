@@ -1,0 +1,107 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9C9FBD11-736C-40F6-8FD3-4D8E11E12BE9}"
+	ProjectSection(SolutionItems) = preProject
+		OGA.SharedKernel-RELEASE-NOTES.txt = OGA.SharedKernel-RELEASE-NOTES.txt
+	EndProjectSection
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "OGA.SharedKernel_SP", "OGA.SharedKernel_SP\OGA.SharedKernel_SP.shproj", "{60DEFCAD-5BFC-4F61-B64F-833E7C5DDF16}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OGA.SharedKernel_NET6", "OGA.SharedKernel_NET6\OGA.SharedKernel_NET6.csproj", "{21D295A2-A1F0-4316-9E83-25D094D7986A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OGA.SharedKernel_NET5", "OGA.SharedKernel_NET5\OGA.SharedKernel_NET5.csproj", "{23A2CCD7-3957-4E92-BDF0-C7F9B45F7B10}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OGA.SharedKernel_NET452", "OGA.SharedKernel_NET452\OGA.SharedKernel_NET452.csproj", "{D74CFEC4-CEE3-48AD-A3AE-2DCE21AAA61E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OGA.SharedKernel_NET47", "OGA.SharedKernel_NET47\OGA.SharedKernel_NET47.csproj", "{3E418A57-D8EF-43B9-B801-398B04BA4BB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OGA.SharedKernel_NET6_Tests", "OGA.SharedKernel_NET6_Tests\OGA.SharedKernel_NET6_Tests.csproj", "{559DB5C7-1C47-4F75-AFA9-B63082E02DAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		DebugLinux|Any CPU = DebugLinux|Any CPU
+		DebugWin|Any CPU = DebugWin|Any CPU
+		Release|Any CPU = Release|Any CPU
+		ReleaseLinux|Any CPU = ReleaseLinux|Any CPU
+		ReleaseWin|Any CPU = ReleaseWin|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21D295A2-A1F0-4316-9E83-25D094D7986A}.Debug|Any CPU.ActiveCfg = DebugWin|Any CPU
+		{21D295A2-A1F0-4316-9E83-25D094D7986A}.Debug|Any CPU.Build.0 = DebugWin|Any CPU
+		{21D295A2-A1F0-4316-9E83-25D094D7986A}.DebugLinux|Any CPU.ActiveCfg = DebugLinux|Any CPU
+		{21D295A2-A1F0-4316-9E83-25D094D7986A}.DebugLinux|Any CPU.Build.0 = DebugLinux|Any CPU
+		{21D295A2-A1F0-4316-9E83-25D094D7986A}.DebugWin|Any CPU.ActiveCfg = DebugWin|Any CPU
+		{21D295A2-A1F0-4316-9E83-25D094D7986A}.DebugWin|Any CPU.Build.0 = DebugWin|Any CPU
+		{21D295A2-A1F0-4316-9E83-25D094D7986A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21D295A2-A1F0-4316-9E83-25D094D7986A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21D295A2-A1F0-4316-9E83-25D094D7986A}.ReleaseLinux|Any CPU.ActiveCfg = ReleaseLinux|Any CPU
+		{21D295A2-A1F0-4316-9E83-25D094D7986A}.ReleaseLinux|Any CPU.Build.0 = ReleaseLinux|Any CPU
+		{21D295A2-A1F0-4316-9E83-25D094D7986A}.ReleaseWin|Any CPU.ActiveCfg = ReleaseWin|Any CPU
+		{21D295A2-A1F0-4316-9E83-25D094D7986A}.ReleaseWin|Any CPU.Build.0 = ReleaseWin|Any CPU
+		{23A2CCD7-3957-4E92-BDF0-C7F9B45F7B10}.Debug|Any CPU.ActiveCfg = DebugWin|Any CPU
+		{23A2CCD7-3957-4E92-BDF0-C7F9B45F7B10}.Debug|Any CPU.Build.0 = DebugWin|Any CPU
+		{23A2CCD7-3957-4E92-BDF0-C7F9B45F7B10}.DebugLinux|Any CPU.ActiveCfg = DebugLinux|Any CPU
+		{23A2CCD7-3957-4E92-BDF0-C7F9B45F7B10}.DebugLinux|Any CPU.Build.0 = DebugLinux|Any CPU
+		{23A2CCD7-3957-4E92-BDF0-C7F9B45F7B10}.DebugWin|Any CPU.ActiveCfg = DebugWin|Any CPU
+		{23A2CCD7-3957-4E92-BDF0-C7F9B45F7B10}.DebugWin|Any CPU.Build.0 = DebugWin|Any CPU
+		{23A2CCD7-3957-4E92-BDF0-C7F9B45F7B10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23A2CCD7-3957-4E92-BDF0-C7F9B45F7B10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23A2CCD7-3957-4E92-BDF0-C7F9B45F7B10}.ReleaseLinux|Any CPU.ActiveCfg = ReleaseLinux|Any CPU
+		{23A2CCD7-3957-4E92-BDF0-C7F9B45F7B10}.ReleaseLinux|Any CPU.Build.0 = ReleaseLinux|Any CPU
+		{23A2CCD7-3957-4E92-BDF0-C7F9B45F7B10}.ReleaseWin|Any CPU.ActiveCfg = ReleaseWin|Any CPU
+		{23A2CCD7-3957-4E92-BDF0-C7F9B45F7B10}.ReleaseWin|Any CPU.Build.0 = ReleaseWin|Any CPU
+		{D74CFEC4-CEE3-48AD-A3AE-2DCE21AAA61E}.Debug|Any CPU.ActiveCfg = DebugWin|Any CPU
+		{D74CFEC4-CEE3-48AD-A3AE-2DCE21AAA61E}.Debug|Any CPU.Build.0 = DebugWin|Any CPU
+		{D74CFEC4-CEE3-48AD-A3AE-2DCE21AAA61E}.DebugLinux|Any CPU.ActiveCfg = DebugLinux|Any CPU
+		{D74CFEC4-CEE3-48AD-A3AE-2DCE21AAA61E}.DebugLinux|Any CPU.Build.0 = DebugLinux|Any CPU
+		{D74CFEC4-CEE3-48AD-A3AE-2DCE21AAA61E}.DebugWin|Any CPU.ActiveCfg = DebugWin|Any CPU
+		{D74CFEC4-CEE3-48AD-A3AE-2DCE21AAA61E}.DebugWin|Any CPU.Build.0 = DebugWin|Any CPU
+		{D74CFEC4-CEE3-48AD-A3AE-2DCE21AAA61E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D74CFEC4-CEE3-48AD-A3AE-2DCE21AAA61E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D74CFEC4-CEE3-48AD-A3AE-2DCE21AAA61E}.ReleaseLinux|Any CPU.ActiveCfg = ReleaseLinux|Any CPU
+		{D74CFEC4-CEE3-48AD-A3AE-2DCE21AAA61E}.ReleaseLinux|Any CPU.Build.0 = ReleaseLinux|Any CPU
+		{D74CFEC4-CEE3-48AD-A3AE-2DCE21AAA61E}.ReleaseWin|Any CPU.ActiveCfg = ReleaseWin|Any CPU
+		{D74CFEC4-CEE3-48AD-A3AE-2DCE21AAA61E}.ReleaseWin|Any CPU.Build.0 = ReleaseWin|Any CPU
+		{3E418A57-D8EF-43B9-B801-398B04BA4BB2}.Debug|Any CPU.ActiveCfg = DebugWin|Any CPU
+		{3E418A57-D8EF-43B9-B801-398B04BA4BB2}.Debug|Any CPU.Build.0 = DebugWin|Any CPU
+		{3E418A57-D8EF-43B9-B801-398B04BA4BB2}.DebugLinux|Any CPU.ActiveCfg = DebugLinux|Any CPU
+		{3E418A57-D8EF-43B9-B801-398B04BA4BB2}.DebugLinux|Any CPU.Build.0 = DebugLinux|Any CPU
+		{3E418A57-D8EF-43B9-B801-398B04BA4BB2}.DebugWin|Any CPU.ActiveCfg = DebugWin|Any CPU
+		{3E418A57-D8EF-43B9-B801-398B04BA4BB2}.DebugWin|Any CPU.Build.0 = DebugWin|Any CPU
+		{3E418A57-D8EF-43B9-B801-398B04BA4BB2}.Release|Any CPU.ActiveCfg = ReleaseWin|Any CPU
+		{3E418A57-D8EF-43B9-B801-398B04BA4BB2}.Release|Any CPU.Build.0 = ReleaseWin|Any CPU
+		{3E418A57-D8EF-43B9-B801-398B04BA4BB2}.ReleaseLinux|Any CPU.ActiveCfg = ReleaseLinux|Any CPU
+		{3E418A57-D8EF-43B9-B801-398B04BA4BB2}.ReleaseLinux|Any CPU.Build.0 = ReleaseLinux|Any CPU
+		{3E418A57-D8EF-43B9-B801-398B04BA4BB2}.ReleaseWin|Any CPU.ActiveCfg = ReleaseWin|Any CPU
+		{3E418A57-D8EF-43B9-B801-398B04BA4BB2}.ReleaseWin|Any CPU.Build.0 = ReleaseWin|Any CPU
+		{559DB5C7-1C47-4F75-AFA9-B63082E02DAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{559DB5C7-1C47-4F75-AFA9-B63082E02DAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{559DB5C7-1C47-4F75-AFA9-B63082E02DAE}.DebugLinux|Any CPU.ActiveCfg = Debug|Any CPU
+		{559DB5C7-1C47-4F75-AFA9-B63082E02DAE}.DebugLinux|Any CPU.Build.0 = Debug|Any CPU
+		{559DB5C7-1C47-4F75-AFA9-B63082E02DAE}.DebugWin|Any CPU.ActiveCfg = Debug|Any CPU
+		{559DB5C7-1C47-4F75-AFA9-B63082E02DAE}.DebugWin|Any CPU.Build.0 = Debug|Any CPU
+		{559DB5C7-1C47-4F75-AFA9-B63082E02DAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{559DB5C7-1C47-4F75-AFA9-B63082E02DAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{559DB5C7-1C47-4F75-AFA9-B63082E02DAE}.ReleaseLinux|Any CPU.ActiveCfg = Release|Any CPU
+		{559DB5C7-1C47-4F75-AFA9-B63082E02DAE}.ReleaseLinux|Any CPU.Build.0 = Release|Any CPU
+		{559DB5C7-1C47-4F75-AFA9-B63082E02DAE}.ReleaseWin|Any CPU.ActiveCfg = Release|Any CPU
+		{559DB5C7-1C47-4F75-AFA9-B63082E02DAE}.ReleaseWin|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {40937BB3-C40A-4A8C-8D8B-8BAB34630A08}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		OGA.SharedKernel_SP\OGA.SharedKernel_SP.projitems*{21d295a2-a1f0-4316-9e83-25d094d7986a}*SharedItemsImports = 5
+		OGA.SharedKernel_SP\OGA.SharedKernel_SP.projitems*{23a2ccd7-3957-4e92-bdf0-c7f9b45f7b10}*SharedItemsImports = 5
+		OGA.SharedKernel_SP\OGA.SharedKernel_SP.projitems*{3e418a57-d8ef-43b9-b801-398b04ba4bb2}*SharedItemsImports = 5
+		OGA.SharedKernel_SP\OGA.SharedKernel_SP.projitems*{60defcad-5bfc-4f61-b64f-833e7c5ddf16}*SharedItemsImports = 13
+		OGA.SharedKernel_SP\OGA.SharedKernel_SP.projitems*{d74cfec4-cee3-48ad-a3ae-2dce21aaa61e}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal

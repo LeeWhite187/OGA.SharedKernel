@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>60defcad-5bfc-4f61-b64f-833e7c5ddf16</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>OGA.SharedKernel_SP</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Attributes\EntitySecurityAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)cGlobal_Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Config\structs\Config_AppPaths.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Config\structs\Config_BuildData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Config\structs\Config_RuntimeData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Config\structs\Config_AppPaths_v2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Config\structs\EnvVars_Config.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)cReturnData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\AccessControlException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\AlreadyExistsException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\AppException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\BaseException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\BusinessRuleExceptions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Exceptions\NotFoundException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DateTime\DateTimeUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Logging\Logging_Base.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Process\App_Data_v2.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Process\App_Data.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Process\cStackTrace.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueryHelpers\PaginationFilter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IUriService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Version\Version3.cs" />
+  </ItemGroup>
+</Project>

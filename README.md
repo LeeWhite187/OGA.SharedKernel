@@ -1,2 +1,2 @@
 # OGA.SharedKernel
-Base classes for various process types
+Base Shared Libraries for various project types.
