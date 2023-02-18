@@ -23,3 +23,6 @@ It is currently built using Visual Studio 2019 17.1.
 ## License
 
 Please see the [License](LICENSE).
+
+## Stats
+<img src="https://repobeats.axiom.co/api/embed/f917a77cbbdeee19b87fa1f2f932895d1df18b31.svg" />
