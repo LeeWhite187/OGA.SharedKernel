@@ -10,6 +10,7 @@
     <description>Base Exceptions, attributes, config and process globals, and a few other elements that are used by all projects.</description>
     <releaseNotes>(Please write the package release notes in "OGA.SharedKernel-RELEASE-NOTES.txt".)</releaseNotes>
     <copyright>$copyright$</copyright>
+    <license type="expression">MIT</license>
 
     <dependencies>
       <group targetFramework="net6.0">
