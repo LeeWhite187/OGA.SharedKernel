@@ -16,6 +16,7 @@ It contains multiple projects, one for each of the following frameworks:
 * NET Framework 4.7
 * NET 5
 * NET 6
+
 And, the output nuget package includes runtimes targets for:
 * linux-64
 * win-x64
