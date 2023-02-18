@@ -139,12 +139,27 @@ pipeline
 				sh "mono /usr/lib/nuget/nuget.exe pack ./${solutionFolder}/${projectName}.nuspec -IncludeReferencedProjects -symbols -SymbolPackageFormat snupkg -OutputDirectory ./Publish -Verbosity detailed"
            }
 		}
-        stage('Publish Nuget Package')
+        stage('Publish to Local Nuget')
 		{
            steps
 		   {
 				sh "dotnet nuget push -s http://192.168.1.161:8080/v3/index.json './Publish/${projectName}.${version3}.nupkg'"
 				sh "dotnet nuget push -s http://192.168.1.161:8080/v3/index.json './Publish/${projectName}.${version3}.snupkg'"
+           }
+		}
+        stage('Publish Public Nuget')
+		{
+           steps
+		   {
+				// Retrieve the API key for pushing packages...
+				withCredentials([string(credentialsId: 'nuget.org-apikey-20230217', variable: 'NUGETAPIKEY')])
+				{
+					//set SECRET with the credential content
+					echo "My secret text is '${NUGETAPIKEY}'"
+
+					sh "dotnet nuget push -s https://api.nuget.org/v3/index.json './Publish/${projectName}.${version3}.nupkg' --api-key ${NUGETAPIKEY}"
+					sh "dotnet nuget push -s https://api.nuget.org/v3/index.json './Publish/${projectName}.${version3}.snupkg' --api-key ${NUGETAPIKEY}"
+				}
            }
 		}
 		stage ('Set New Version Tag')
