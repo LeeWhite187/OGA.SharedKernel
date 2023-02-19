@@ -4,6 +4,7 @@ Base Shared Libraries for various project types.
 ## Description
 The intention of this library is to be the bottom layer of a process stack, providing the most common, base classes and interfaces for all layers above it (domain, infrastructure, API, and process).\
 Specifically, this library was put together to be the exclusive reference for any Domain library, allowing the domain logic to be free of other assembly references.\
+
 This library includes the following classes and elements that can be consumed:
 * Date Time Utility extension class for truncating timestamps as needed for compatibility across backends.
 * Some attribute classes used to decorate entities and other classes.
