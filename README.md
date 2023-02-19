@@ -21,11 +21,11 @@ This library includes the following classes and elements that can be consumed:
 
 ## Opinionation Apology...
 This library references NLog, directly, for now.\
-I understand this may appear overly opinionated in the bottom layer of a process stack. I agree.\
-Once I get a chance to circle back, and work through a more agnostic logging interface, I will change this for a more general solution.
+I understand this may appear overly opinionated, at the bottom layer of a process stack. I agree... though, NLog works very well.\
+Once I get a chance to circle back, and work through a more agnostic logging interface, I will update (removing the specific logger tie).
 
-You're welcome to compile with whatever logger you'd like, of course.\
-Send me feedback or a pull (if you feel inclined), so I know it helps someone else, for me to make time and generalize the logging layer.
+You're welcome to swap out and compile whatever logger you'd like, of course.\
+If you have the need or feel inclined, send me feedback or a pull, so I know it helps someone else, to make time and generalize the logging layer.
 
 ## Installation
 OGA.SharedKernel is available via NuGet:
