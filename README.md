@@ -2,9 +2,7 @@
 Base Shared Libraries for various project types.
 
 ## Description
-This is the lowest layer library of standardized classes used by all other libraries.
-This library is composed of classes and elements taken fromn the common libraries, to serve as a bottom layer that is thin enough to be used by the Domain Base libraries.
-This allows any assembly in a process to use this library without pollution.
+The intention of this library is to be the bottom layer of a process stack, providing the most common, base classes and interfaces for all layers above it (domain, infrastructure, API, and process).
 Specifically, this library was put together to be the exclusive reference for any Domain library, allowing the domain logic to be free of other assembly references.
 This library includes the following classes and elements that can be consumed:
 * Date Time Utility extension class for truncating timestamps as needed for compatibility across backends.
@@ -21,9 +19,11 @@ This library includes the following classes and elements that can be consumed:
 * A Return Data class, that allows a method to return a result and a message without a REF or OUT argument.
 
 ## Opinionation Apology...
-This library uses NLog, which for some, may appear opinionated.
-Once I get a chance to circle back, and work through an agnostic logging interface, I will remedy this.
-You're welcome to compile the code with whatever logger you'd like, of course.
+This library uses NLog, for now.
+I understand this may appear opinionated, to have a specific logger at such a low layer of a process stack (I agree).
+Once I get a chance to circle back, and work through a more agnostic logging interface, I will change this for a more general solution.
+You're welcome to compile with whatever logger you'd like, of course.
+Send me feedback or a pull (if you feel inclined), so I know it would help someone else, for me to make time and generalize the logging layer.
 
 ## Installation
 OGA.SharedKernel is available via NuGet:
