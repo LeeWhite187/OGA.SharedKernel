@@ -31,6 +31,10 @@ If you have the need or feel inclined, send me feedback or a pull, so I know it 
 OGA.SharedKernel is available via NuGet:
 * NuGet Official Releases: [![NuGet](https://img.shields.io/nuget/vpre/OGA.SharedKernel.svg?label=NuGet)](https://www.nuget.org/packages/OGA.SharedKernel)
 
+## Dependencies
+This library depends on:
+* [NLog](https://github.com/NLog/NLog/)
+
 ## Building OGA.SharedKernel
 This library is built with the new SDK-style projects.
 It contains multiple projects, one for each of the following frameworks:
