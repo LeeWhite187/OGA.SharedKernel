@@ -19,14 +19,6 @@ This library includes the following classes and elements that can be consumed:
 * Global constants class for exposing company and application metadata to the entire process stack.
 * A Return Data class, that allows a method to return a result and a message without a REF or OUT argument.
 
-## Opinionation Apology...
-This library references NLog, directly, for now.\
-I understand this may appear overly opinionated, at the bottom layer of a process stack. I agree... though, NLog works very well.\
-Once I get a chance to circle back, and work through a more agnostic logging interface, I will update (removing the specific logger tie).
-
-You're welcome to swap out and compile whatever logger you'd like, of course.\
-If you have the need or feel inclined, send me feedback or a pull, so I know it helps someone else, to make time and generalize the logging layer.
-
 ## Installation
 OGA.SharedKernel is available via NuGet:
 * NuGet Official Releases: [![NuGet](https://img.shields.io/nuget/vpre/OGA.SharedKernel.svg?label=NuGet)](https://www.nuget.org/packages/OGA.SharedKernel)
@@ -56,3 +48,11 @@ This library is currently built using Visual Studio 2019 17.1.
 
 ## License
 Please see the [License](LICENSE).
+
+## Opinionation Apology...
+This library references NLog, directly, for now.\
+I understand this may appear overly opinionated, at the bottom layer of a process stack. I agree... though, NLog works very well.\
+Once I get a chance to circle back, and work through a more agnostic logging interface, I will update (removing the specific logger tie).
+
+You're welcome to swap out and compile whatever logger you'd like, of course.\
+If you have the need or feel inclined, send me feedback or a pull, so I know it helps someone else, to make time and generalize the logging layer.
