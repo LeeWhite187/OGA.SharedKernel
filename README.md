@@ -41,6 +41,10 @@ And, the output nuget package includes runtimes targets for:
 * linux-64
 * win-x64
 
+## Framework and Runtime Support
+Currently, the nuget package of this library supports the framework versions and runtimes of applications that I maintain (see above).
+If someone needs others (older or newer), let me know, and I'll add them to the build script.
+
 ## Visual Studio
 It is currently built using Visual Studio 2019 17.1.
 
