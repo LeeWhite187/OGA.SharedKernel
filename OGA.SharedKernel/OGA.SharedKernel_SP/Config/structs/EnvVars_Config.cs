@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace OGA.SharedKernel_SP.Config.structs
+namespace OGA.SharedKernel.Config.structs
 {
     /// <summary>
     /// Simple POCO used for loading service configuration.

@@ -6,7 +6,7 @@ using System.Globalization;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace OGA.SharedKernel_SP.Version
+namespace OGA.SharedKernel.Version
 {
     /// <summary>
     /// Intended to be a version class suitable for semantic version data.
