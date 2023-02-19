@@ -7,6 +7,7 @@ namespace OGA.SharedKernel.Process
     /// This includes providing global access to Ids, version, runtime encryption key, important folder paths, etc...
     /// NOTE: Most of the properties of this class are set during process startup, allowing this class to remain thin.
     /// </summary>
+    [Obsolete("This class has been superceded by, App_Data_v2, which more directly supports semantic versioning. This class version remains in place, for legacy support.", false)]
     static public class App_Data
     {
         #region Public Properties
@@ -88,7 +89,7 @@ namespace OGA.SharedKernel.Process
 
         static App_Data()
         {
-            Version = new Version();
+            Version = new System.Version();
 
             Company_Name = cGlobal_Constants.CompanyName;
             Application_Name = cGlobal_Constants.Unnamed;

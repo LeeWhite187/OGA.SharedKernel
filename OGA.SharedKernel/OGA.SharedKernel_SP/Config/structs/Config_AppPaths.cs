@@ -9,6 +9,7 @@ namespace OGA.SharedKernel.Config.structs
     /// <summary>
     /// This class is used to retrieve config and log paths from exe config files.
     /// </summary>
+    [Obsolete("This class has been superceded by, Config_AppPaths_v2, which adds additional properties. This version remains in place, for legacy support.", false)]
     public class Config_AppPaths
     {
         #region Public Properties

@@ -1,4 +1,4 @@
-﻿using OGA.SharedKernel_SP.Version;
+﻿using OGA.SharedKernel.Version;
 using System;
 
 namespace OGA.SharedKernel.Process
