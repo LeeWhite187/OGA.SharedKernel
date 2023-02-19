@@ -20,6 +20,11 @@ This library includes the following classes and elements that can be consumed:
 * Global constants class for exposing company and application metadata to the entire process stack.
 * A Return Data class, that allows a method to return a result and a message without a REF or OUT argument.
 
+## Opinionation Apology...
+This library uses NLog, which for some, may appear opinionated.
+Once I get a chance to circle back, and work through an agnostic logging interface, I will remedy this.
+You're welcome to compile the code with whatever logger you'd like, of course.
+
 ## Installation
 OGA.SharedKernel is available via NuGet:
 * NuGet Official Releases: [![NuGet](https://img.shields.io/nuget/vpre/OGA.SharedKernel.svg?label=NuGet)](https://www.nuget.org/packages/OGA.SharedKernel)
