@@ -20,8 +20,8 @@ This library includes the following classes and elements that can be consumed:
 * A Return Data class, that allows a method to return a result and a message without a REF or OUT argument.
 
 ## Opinionation Apology...
-This library uses NLog, for now.\
-I understand this may appear opinionated, to have a specific logger at such a low layer of a process stack (I agree).\
+This library references NLog, directly, for now.\
+I understand this may appear overly opinionated in the bottom layer of a process stack. I agree.\
 Once I get a chance to circle back, and work through a more agnostic logging interface, I will change this for a more general solution.
 You're welcome to compile with whatever logger you'd like, of course.\
 Send me feedback or a pull (if you feel inclined), so I know it helps someone else, for me to make time and generalize the logging layer.
