@@ -48,7 +48,7 @@ Currently, the nuget package of this library supports the framework versions and
 If someone needs others (older or newer), let me know, and I'll add them to the build script.
 
 ## Visual Studio
-It is currently built using Visual Studio 2019 17.1.
+This library is currently built using Visual Studio 2019 17.1.
 
 ## License
 Please see the [License](LICENSE).
