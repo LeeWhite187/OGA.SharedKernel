@@ -23,7 +23,7 @@ This library uses NLog, for now.
 I understand this may appear opinionated, to have a specific logger at such a low layer of a process stack (I agree).\
 Once I get a chance to circle back, and work through a more agnostic logging interface, I will change this for a more general solution.
 You're welcome to compile with whatever logger you'd like, of course.\
-Send me feedback or a pull (if you feel inclined), so I know it would help someone else, for me to make time and generalize the logging layer.
+Send me feedback or a pull (if you feel inclined), so I know it helps someone else, for me to make time and generalize the logging layer.
 
 ## Installation
 OGA.SharedKernel is available via NuGet:
