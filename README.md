@@ -22,7 +22,7 @@ This library includes the following classes and elements that can be consumed:
 ## Opinionation Apology...
 This library references NLog, directly, for now.\
 I understand this may appear overly opinionated in the bottom layer of a process stack. I agree.\
-Once I get a chance to circle back, and work through a more agnostic logging interface, I will change this for a more general solution.
+Once I get a chance to circle back, and work through a more agnostic logging interface, I will change this for a more general solution.\
 You're welcome to compile with whatever logger you'd like, of course.\
 Send me feedback or a pull (if you feel inclined), so I know it helps someone else, for me to make time and generalize the logging layer.
 
