@@ -22,7 +22,7 @@ namespace OGA.SharedKernel.Process
         /// <summary>
         /// Holds the build number for the application binary.
         /// </summary>
-        static int BuildNumber { get; set; }
+        static public int BuildNumber { get; set; }
 
         /// <summary>
         /// Set to the Company name of the application, during process startup.
