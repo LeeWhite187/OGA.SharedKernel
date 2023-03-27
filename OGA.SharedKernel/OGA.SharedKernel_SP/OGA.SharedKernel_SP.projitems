@@ -30,6 +30,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Process\cStackTrace.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)QueryHelpers\PaginationFilter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IUriService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SpecialTypes\Serialization_Helper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SpecialTypes\Void.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Version\Version3.cs" />
   </ItemGroup>
 </Project>
