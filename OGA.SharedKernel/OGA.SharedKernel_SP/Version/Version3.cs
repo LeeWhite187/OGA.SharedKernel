@@ -236,7 +236,7 @@ namespace OGA.SharedKernel.Version
 #endregion
 
 
-#region Operator Overloads
+        #region Operator Overloads
 
         // Force inline as the true/false ternary takes it above ALWAYS_INLINE size even though the asm ends up smaller
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -317,10 +317,10 @@ namespace OGA.SharedKernel.Version
         public static bool operator >=(cVersion3? v1, cVersion3? v2) => v2 <= v1;
 #endif
 
-#endregion
+        #endregion
 
 
-#region Private Methods
+        #region Private Methods
 
         /// <summary>
         /// Since this is a version3 class, it only works with Semantic versions of the form: Ma.Mi.Pa
@@ -407,6 +407,6 @@ namespace OGA.SharedKernel.Version
             return int.TryParse(component, NumberStyles.Integer, CultureInfo.InvariantCulture, out parsedComponent) && parsedComponent >= 0;
         }
 
-#endregion
+        #endregion
     }
 }

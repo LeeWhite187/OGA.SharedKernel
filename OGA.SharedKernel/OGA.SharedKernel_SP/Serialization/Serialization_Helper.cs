@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace oga.Common.SpecialTypes
+namespace OGA.SharedKernel.Serialization
 {
     public class Serialization_Helper
     {

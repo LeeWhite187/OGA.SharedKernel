@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace oga.SharedKernel.SpecialTypes
+namespace OGA.SharedKernel.SpecialTypes
 {
     /// <summary>
     /// This struct is a simple implementation of the builtin "void".
