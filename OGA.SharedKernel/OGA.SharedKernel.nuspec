@@ -30,24 +30,28 @@
   </metadata>
   <files>
     <file src=".\OGA.SharedKernel_NET6\bin\DebugWin\net6.0\win-x64\OGA.SharedKernel.dll" target="ref\net6.0" />
+    <file src=".\OGA.SharedKernel_NET6\bin\DebugWin\net6.0\win-x64\OGA.SharedKernel.xml" target="ref\net6.0" />
     <file src=".\OGA.SharedKernel_NET6\bin\DebugWin\net6.0\win-x64\OGA.SharedKernel.dll" target="runtimes\win-x64\lib\net6.0" />
     <file src=".\OGA.SharedKernel_NET6\bin\DebugWin\net6.0\win-x64\OGA.SharedKernel.pdb" target="runtimes\win-x64\lib\net6.0" />
     <file src=".\OGA.SharedKernel_NET6\bin\DebugLinux\net6.0\linux-x64\OGA.SharedKernel.dll" target="runtimes\linux-x64\lib\net6.0" />
     <file src=".\OGA.SharedKernel_NET6\bin\DebugLinux\net6.0\linux-x64\OGA.SharedKernel.pdb" target="runtimes\linux-x64\lib\net6.0" />
 
     <file src=".\OGA.SharedKernel_NET5\bin\DebugWin\net5.0\win-x64\OGA.SharedKernel.dll" target="ref\net5.0" />
+    <file src=".\OGA.SharedKernel_NET5\bin\DebugWin\net5.0\win-x64\OGA.SharedKernel.xml" target="ref\net5.0" />
     <file src=".\OGA.SharedKernel_NET5\bin\DebugWin\net5.0\win-x64\OGA.SharedKernel.dll" target="runtimes\win-x64\lib\net5.0" />
     <file src=".\OGA.SharedKernel_NET5\bin\DebugWin\net5.0\win-x64\OGA.SharedKernel.pdb" target="runtimes\win-x64\lib\net5.0" />
     <file src=".\OGA.SharedKernel_NET5\bin\DebugLinux\net5.0\linux-x64\OGA.SharedKernel.dll" target="runtimes\linux-x64\lib\net5.0" />
     <file src=".\OGA.SharedKernel_NET5\bin\DebugLinux\net5.0\linux-x64\OGA.SharedKernel.pdb" target="runtimes\linux-x64\lib\net5.0" />
 
     <file src=".\OGA.SharedKernel_NET452\bin\DebugWin\net452\win-x64\OGA.SharedKernel.dll" target="ref\net452" />
+    <file src=".\OGA.SharedKernel_NET452\bin\DebugWin\net452\win-x64\OGA.SharedKernel.xml" target="ref\net452" />
     <file src=".\OGA.SharedKernel_NET452\bin\DebugWin\net452\win-x64\OGA.SharedKernel.dll" target="runtimes\win-x64\lib\net452" />
     <file src=".\OGA.SharedKernel_NET452\bin\DebugWin\net452\win-x64\OGA.SharedKernel.pdb" target="runtimes\win-x64\lib\net452" />
     <file src=".\OGA.SharedKernel_NET452\bin\DebugLinux\net452\linux-x64\OGA.SharedKernel.dll" target="runtimes\linux-x64\lib\net452" />
     <file src=".\OGA.SharedKernel_NET452\bin\DebugLinux\net452\linux-x64\OGA.SharedKernel.pdb" target="runtimes\linux-x64\lib\net452" />
 
     <file src=".\OGA.SharedKernel_NET47\bin\DebugWin\net47\win-x64\OGA.SharedKernel.dll" target="ref\net47" />
+    <file src=".\OGA.SharedKernel_NET47\bin\DebugWin\net47\win-x64\OGA.SharedKernel.xml" target="ref\net47" />
     <file src=".\OGA.SharedKernel_NET47\bin\DebugWin\net47\win-x64\OGA.SharedKernel.dll" target="runtimes\win-x64\lib\net47" />
     <file src=".\OGA.SharedKernel_NET47\bin\DebugWin\net47\win-x64\OGA.SharedKernel.pdb" target="runtimes\win-x64\lib\net47" />
     <file src=".\OGA.SharedKernel_NET47\bin\DebugLinux\net47\linux-x64\OGA.SharedKernel.dll" target="runtimes\linux-x64\lib\net47" />

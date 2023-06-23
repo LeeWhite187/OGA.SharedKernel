@@ -26,6 +26,7 @@
     <PackageReleaseNotes>(Please write the package release notes in "OGA.SharedKernel-RELEASE-NOTES.txt".)</PackageReleaseNotes>
     <AssemblyName>OGA.SharedKernel</AssemblyName>
     <RootNamespace>OGA.SharedKernel</RootNamespace>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="$(Configuration.EndsWith('Win'))">
