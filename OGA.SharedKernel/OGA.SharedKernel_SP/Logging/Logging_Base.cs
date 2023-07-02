@@ -35,6 +35,21 @@ namespace OGA.SharedKernel
             return caller;
         }
 
+        /// <summary>
+        /// Centralized method for quickly determining a method's name.
+        /// Centralized method for quickly getting the source file, line number, and method name.
+        /// To use, call it without setting any parameters.
+        /// It returns a triplet of the source file, line, and method name.
+        /// </summary>
+        /// <returns></returns>
+        static public (string filepath, int lineno, string function) Get_CallSite_Data(
+            [CallerFilePath] string filePath = "",
+            [CallerLineNumber] int lineno = -1,
+            [CallerMemberName] string function = "")
+        {
+            return (filePath, lineno, function);
+        }
+
         #endregion
     }
 }
