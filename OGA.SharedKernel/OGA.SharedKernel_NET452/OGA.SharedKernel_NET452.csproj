@@ -43,6 +43,7 @@
 
   <ItemGroup>
     <PackageReference Include="NLog" Version="5.0.4" />
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
   </ItemGroup>
 
   <Import Project="..\OGA.SharedKernel_SP\OGA.SharedKernel_SP.projitems" Label="Shared" />
