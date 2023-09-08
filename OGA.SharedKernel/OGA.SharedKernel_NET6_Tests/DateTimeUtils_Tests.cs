@@ -2,7 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OGA.SharedKernel.Extensions.DateandTime;
 using System;
 
-namespace DateTimeUtils_Tests
+namespace OGA.SharedKernel_NET6_Tests
 {
     [TestClass]
     public class DateTimeUtils_Tests
