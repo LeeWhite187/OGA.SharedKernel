@@ -129,7 +129,7 @@ pipeline
 				sh "dotnet build '${projectFolder}_NET47/${projectName}_NET47.csproj' -c DebugLinux --runtime linux-x64 --no-self-contained"
 				sh "dotnet build '${projectFolder}_NET5/${projectName}_NET5.csproj' -c DebugLinux --runtime linux-x64 --no-self-contained"
 				sh "dotnet build '${projectFolder}_NET6/${projectName}_NET6.csproj' -c DebugLinux --runtime linux-x64 --no-self-contained"
-				sh "dotnet build '${projectFolder}_NET7/${projectName}_NET6.csproj' -c DebugLinux --runtime linux-x64 --no-self-contained"
+				sh "dotnet build '${projectFolder}_NET7/${projectName}_NET7.csproj' -c DebugLinux --runtime linux-x64 --no-self-contained"
            }
 		}
         stage('Build-Windows')
