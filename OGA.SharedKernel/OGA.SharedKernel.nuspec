@@ -34,19 +34,19 @@
 
     <references>
         <group targetFramework="net7.0">
-            <reference file="OGA.SharedKernel.dll" />
+            <reference file="ref\net7.0\OGA.SharedKernel.dll" />
         </group>
         <group targetFramework="net6.0">
-            <reference file="OGA.SharedKernel.dll" />
+            <reference file="ref\net6.0\OGA.SharedKernel.dll" />
         </group>
         <group targetFramework="net5.0">
-            <reference file="OGA.SharedKernel.dll" />
+            <reference file="ref\net5.0\OGA.SharedKernel.dll" />
         </group>
         <group targetFramework="net47">
-            <reference file="OGA.SharedKernel.dll" />
+            <reference file="ref\net47\OGA.SharedKernel.dll" />
         </group>
         <group targetFramework="net452">
-            <reference file="OGA.SharedKernel.dll" />
+            <reference file="ref\net452\OGA.SharedKernel.dll" />
         </group>
     </references>  
 
