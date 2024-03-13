@@ -68,4 +68,22 @@
     <file src=".\OGA.SharedKernel_NET452\bin\DebugLinux\net452\linux-x64\OGA.SharedKernel.dll" target="runtimes\linux-x64\lib\net452" />
     <file src=".\OGA.SharedKernel_NET452\bin\DebugLinux\net452\linux-x64\OGA.SharedKernel.pdb" target="runtimes\linux-x64\lib\net452" />
   </files>
+
+<references>
+    <group targetFramework="net7.0">
+        <reference file="OGA.SharedKernel.dll" />
+    </group>
+    <group targetFramework="net6.0">
+        <reference file="OGA.SharedKernel.dll" />
+    </group>
+    <group targetFramework="net5.0">
+        <reference file="OGA.SharedKernel.dll" />
+    </group>
+    <group targetFramework="net47">
+        <reference file="OGA.SharedKernel.dll" />
+    </group>
+    <group targetFramework="net452">
+        <reference file="OGA.SharedKernel.dll" />
+    </group>
+</references>  
 </package>
