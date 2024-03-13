@@ -56,4 +56,3 @@ Once I get a chance to circle back, and work through a more agnostic logging int
 
 You're welcome to swap out and compile whatever logger you'd like, of course.\
 If you have the need or feel inclined, send me feedback or a pull, so I know it helps someone, to make time and generalize the logging layer.
-
