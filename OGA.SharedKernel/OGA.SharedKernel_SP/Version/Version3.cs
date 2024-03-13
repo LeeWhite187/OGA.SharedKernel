@@ -12,7 +12,6 @@ namespace OGA.SharedKernel.Version
     /// Intended to be a version class suitable for semantic version data.
     /// Adapted from System.Version class.
     /// </summary>
-
     [Serializable]
 #if NET452
     public sealed class cVersion3 : ICloneable, IComparable, IComparable<cVersion3>, IEquatable<cVersion3>
@@ -32,12 +31,24 @@ namespace OGA.SharedKernel.Version
         #endregion
 
 
-        #region Private Fields
+        #region Public Fields
 
+        /// <summary>
+        /// Major value of the Version3 instance.
+        /// This is the X in: X.Y.Z
+        /// </summary>
         public int Major => _Major;
 
+        /// <summary>
+        /// Minor value of the Version3 instance.
+        /// This is the Y in: X.Y.Z
+        /// </summary>
         public int Minor => _Minor;
 
+        /// <summary>
+        /// Patch value of the Version3 instance.
+        /// This is the Z in: X.Y.Z
+        /// </summary>
         public int Patch => _Patch;
 
         #endregion
@@ -45,6 +56,13 @@ namespace OGA.SharedKernel.Version
 
         #region ctor / dtor
 
+        /// <summary>
+        /// Constructor accepting all three props of a Version3.
+        /// </summary>
+        /// <param name="major"></param>
+        /// <param name="minor"></param>
+        /// <param name="patch"></param>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
         public cVersion3(int major, int minor, int patch)
         {
             if (major < 0)
@@ -61,6 +79,12 @@ namespace OGA.SharedKernel.Version
             _Patch = patch;
         }
 
+        /// <summary>
+        /// Constructor accepting the most significant two properties of a Version3.
+        /// </summary>
+        /// <param name="major"></param>
+        /// <param name="minor"></param>
+        /// <exception cref="ArgumentOutOfRangeException"></exception>
         public cVersion3(int major, int minor)
         {
             if (major < 0)
@@ -74,6 +98,11 @@ namespace OGA.SharedKernel.Version
             _Patch = -1;
         }
 
+        /// <summary>
+        /// Constructor accepting a Version3 in string format.
+        /// NOTE: This constructor ONLY accepts a Version3 string (Major.Minor.Patch)
+        /// </summary>
+        /// <param name="version"></param>
         public cVersion3(string version)
         {
             cVersion3 v = cVersion3.Parse(version);
@@ -82,6 +111,9 @@ namespace OGA.SharedKernel.Version
             _Patch = v.Patch;
         }
 
+        /// <summary>
+        /// Default constructor.
+        /// </summary>
         public cVersion3()
         {
             //_Major = 0;
@@ -89,6 +121,10 @@ namespace OGA.SharedKernel.Version
             //_Patch = 0;
         }
 
+        /// <summary>
+        /// Copy constructor.
+        /// </summary>
+        /// <param name="version"></param>
         private cVersion3(cVersion3 version)
         {
             Debug.Assert(version != null);
@@ -103,16 +139,39 @@ namespace OGA.SharedKernel.Version
 
         #region Public Methods
 
+        /// <summary>
+        /// Standard Clone method for creating a deep copy.
+        /// This method is part of the ICloneable interface, so the class can match the NET native Version class function.
+        /// </summary>
+        /// <returns></returns>
         public object Clone()
         {
             return new cVersion3(this);
         }
 
 #if NET452
+        /// <summary>
+        /// Implementation of the IComparable interface.
+        /// </summary>
+        /// <param name="version"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
         public int CompareTo(object version)
 #elif NET47
+        /// <summary>
+        /// Implementation of the IComparable interface.
+        /// </summary>
+        /// <param name="version"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
         public int CompareTo(object version)
 #else
+        /// <summary>
+        /// Implementation of the IComparable interface.
+        /// </summary>
+        /// <param name="version"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
         public int CompareTo(object? version)
 #endif
         {
@@ -130,10 +189,25 @@ namespace OGA.SharedKernel.Version
         }
 
 #if NET452
+        /// <summary>
+        /// Implementation of the IComparable interface.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public int CompareTo(cVersion3 value)
 #elif NET47
+        /// <summary>
+        /// Implementation of the IComparable interface.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public int CompareTo(cVersion3 value)
 #else
+        /// <summary>
+        /// Implementation of the IComparable interface.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public int CompareTo(cVersion3? value)
 #endif
         {
@@ -152,10 +226,25 @@ namespace OGA.SharedKernel.Version
         }
 
 #if NET452
+        /// <summary>
+        /// Implementation of the IEquatable interface.
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public override bool Equals(object obj)
 #elif NET47
+        /// <summary>
+        /// Implementation of the IEquatable interface.
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public override bool Equals(object obj)
 #else
+        /// <summary>
+        /// Implementation of the IEquatable interface.
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public override bool Equals([NotNullWhen(true)] object? obj)
 #endif
         {
@@ -163,10 +252,25 @@ namespace OGA.SharedKernel.Version
         }
 
 #if NET452
+        /// <summary>
+        /// Implementation of the IEquatable interface.
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public bool Equals(cVersion3 obj)
 #elif NET47
+        /// <summary>
+        /// Implementation of the IEquatable interface.
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public bool Equals(cVersion3 obj)
 #else
+        /// <summary>
+        /// Implementation of the IEquatable interface.
+        /// </summary>
+        /// <param name="obj"></param>
+        /// <returns></returns>
         public bool Equals([NotNullWhen(true)] cVersion3? obj)
 #endif
         {
@@ -177,6 +281,10 @@ namespace OGA.SharedKernel.Version
                 _Patch == obj._Patch);
         }
 
+        /// <summary>
+        /// Implementation of the base object class.
+        /// </summary>
+        /// <returns></returns>
         public override int GetHashCode()
         {
             // Let's assume that most version numbers will be pretty small and just
@@ -191,12 +299,22 @@ namespace OGA.SharedKernel.Version
             return accumulator;
         }
 
+        /// <summary>
+        /// Formats the output as: Mj.Mi.Pa
+        /// </summary>
+        /// <returns></returns>
         override public string ToString()
         {
             string val = $"{this.Major.ToString()}.{this.Minor.ToString()}.{this.Patch.ToString()}";
             return val;
         }
 
+        /// <summary>
+        /// Public method that returns a Version3 instance from a given version3 string.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
         public static cVersion3 Parse(string input)
         {
             if (input == null)
@@ -214,10 +332,34 @@ namespace OGA.SharedKernel.Version
         }
 
 #if NET452
+        /// <summary>
+        /// Public method that attempts to create a Version3 instance from a given version3 string.
+        /// Returns true if successful.
+        /// False if failed.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="result"></param>
+        /// <returns></returns>
         public static bool TryParse(string input, out cVersion3 result)
 #elif NET47
+        /// <summary>
+        /// Public method that attempts to create a Version3 instance from a given version3 string.
+        /// Returns true if successful.
+        /// False if failed.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="result"></param>
+        /// <returns></returns>
         public static bool TryParse(string input, out cVersion3 result)
 #else
+        /// <summary>
+        /// Public method that attempts to create a Version3 instance from a given version3 string.
+        /// Returns true if successful.
+        /// False if failed.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <param name="result"></param>
+        /// <returns></returns>
         public static bool TryParse([NotNullWhen(true)] string? input, [NotNullWhen(true)] out cVersion3? result)
 #endif
         {
@@ -238,6 +380,12 @@ namespace OGA.SharedKernel.Version
 
         #region Operator Overloads
 
+        /// <summary>
+        /// Implements the IEquatable interface, same as the native Version class.
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <param name="v2"></param>
+        /// <returns></returns>
         // Force inline as the true/false ternary takes it above ALWAYS_INLINE size even though the asm ends up smaller
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
 #if NET452
@@ -261,19 +409,55 @@ namespace OGA.SharedKernel.Version
         }
 
 #if NET452
+        /// <summary>
+        /// Implements the IEquatable interface, same as the native Version class.
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <param name="v2"></param>
+        /// <returns></returns>
         public static bool operator !=(cVersion3 v1, cVersion3 v2) => !(v1 == v2);
 #elif NET47
+        /// <summary>
+        /// Implements the IEquatable interface, same as the native Version class.
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <param name="v2"></param>
+        /// <returns></returns>
         public static bool operator !=(cVersion3 v1, cVersion3 v2) => !(v1 == v2);
 #else
+        /// <summary>
+        /// Implements the IEquatable interface, same as the native Version class.
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <param name="v2"></param>
+        /// <returns></returns>
         public static bool operator !=(cVersion3? v1, cVersion3? v2) => !(v1 == v2);
 #endif
 
 
 #if NET452
+        /// <summary>
+        /// Implements the IEquatable interface, same as the native Version class.
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <param name="v2"></param>
+        /// <returns></returns>
         public static bool operator <(cVersion3 v1, cVersion3 v2)
 #elif NET47
+        /// <summary>
+        /// Implements the IEquatable interface, same as the native Version class.
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <param name="v2"></param>
+        /// <returns></returns>
         public static bool operator <(cVersion3 v1, cVersion3 v2)
 #else
+        /// <summary>
+        /// Implements the IEquatable interface, same as the native Version class.
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <param name="v2"></param>
+        /// <returns></returns>
         public static bool operator <(cVersion3? v1, cVersion3? v2)
 #endif
         {
@@ -286,10 +470,28 @@ namespace OGA.SharedKernel.Version
         }
 
 #if NET452
+        /// <summary>
+        /// Implements the IEquatable interface, same as the native Version class.
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <param name="v2"></param>
+        /// <returns></returns>
         public static bool operator <=(cVersion3 v1, cVersion3 v2)
 #elif NET47
+        /// <summary>
+        /// Implements the IEquatable interface, same as the native Version class.
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <param name="v2"></param>
+        /// <returns></returns>
         public static bool operator <=(cVersion3 v1, cVersion3 v2)
 #else
+        /// <summary>
+        /// Implements the IEquatable interface, same as the native Version class.
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <param name="v2"></param>
+        /// <returns></returns>
         public static bool operator <=(cVersion3? v1, cVersion3? v2)
 #endif
         {
@@ -302,18 +504,54 @@ namespace OGA.SharedKernel.Version
         }
 
 #if NET452
+        /// <summary>
+        /// Implements the IEquatable interface, same as the native Version class.
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <param name="v2"></param>
+        /// <returns></returns>
         public static bool operator >(cVersion3 v1, cVersion3 v2) => v2 < v1;
 #elif NET47
+        /// <summary>
+        /// Implements the IEquatable interface, same as the native Version class.
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <param name="v2"></param>
+        /// <returns></returns>
         public static bool operator >(cVersion3 v1, cVersion3 v2) => v2 < v1;
 #else
+        /// <summary>
+        /// Implements the IEquatable interface, same as the native Version class.
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <param name="v2"></param>
+        /// <returns></returns>
         public static bool operator >(cVersion3? v1, cVersion3? v2) => v2 < v1;
 #endif
 
 #if NET452
+        /// <summary>
+        /// Implements the IEquatable interface, same as the native Version class.
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <param name="v2"></param>
+        /// <returns></returns>
         public static bool operator >=(cVersion3 v1, cVersion3 v2) => v2 <= v1;
 #elif NET47
+        /// <summary>
+        /// Implements the IEquatable interface, same as the native Version class.
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <param name="v2"></param>
+        /// <returns></returns>
         public static bool operator >=(cVersion3 v1, cVersion3 v2) => v2 <= v1;
 #else
+        /// <summary>
+        /// Implements the IEquatable interface, same as the native Version class.
+        /// </summary>
+        /// <param name="v1"></param>
+        /// <param name="v2"></param>
+        /// <returns></returns>
         public static bool operator >=(cVersion3? v1, cVersion3? v2) => v2 <= v1;
 #endif
 

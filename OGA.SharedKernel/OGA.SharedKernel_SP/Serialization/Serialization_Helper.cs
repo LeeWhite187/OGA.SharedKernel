@@ -4,6 +4,12 @@ using System.Text;
 
 namespace OGA.SharedKernel.Serialization
 {
+    /// <summary>
+    /// Provides a standardized means of generating class type names, in human-readable format.
+    /// This was created because any reflection query of a generic type yields an implicit type format, that does not directly match the type string in source.
+    /// This class unwinds generic types to create a type string that matches the type string of the type in source.
+    /// This class works for all known primitive, generic, and concrete types.
+    /// </summary>
     public class Serialization_Helper
     {
         /// <summary>
@@ -11,10 +17,11 @@ namespace OGA.SharedKernel.Serialization
         /// Set usefullnames to include the assembly with each classname.
         /// Return type is of the form:
         /// "string"
-        /// "List<string>"
-        /// "DistributionWrapper<SendCommand>"
+        /// NOTE: The following two examples include escaped greater-than and less-than symbols, since this comment block is formatted XML.
+        /// "List&lt;string&gt;"
+        /// "DistributionWrapper&lt;SendCommand&gt;"
         /// </summary>
-        /// <param name="type"></param>
+        /// <param name="obj"></param>
         /// <param name="usefullnames"></param>
         /// <returns></returns>
         static public string GetType_forSerialization(object obj, bool usefullnames = false)
@@ -27,8 +34,9 @@ namespace OGA.SharedKernel.Serialization
         /// Set usefullnames to include the assembly with each classname.
         /// Return type is of the form:
         /// "string"
-        /// "List<string>"
-        /// "DistributionWrapper<SendCommand>"
+        /// NOTE: The following two examples include escaped greater-than and less-than symbols, since this comment block is formatted XML.
+        /// "List&lt;string&gt;"
+        /// "DistributionWrapper&lt;SendCommand&gt;"
         /// </summary>
         /// <param name="type"></param>
         /// <param name="usefullnames"></param>

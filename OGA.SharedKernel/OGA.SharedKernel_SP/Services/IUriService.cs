@@ -13,8 +13,28 @@ namespace OGA.SharedKernel.Services
     public interface IUriService
     {
 #if NET452
+        /// <summary>
+        /// Will create a complete URL for the given route.
+        /// </summary>
+        /// <param name="filter"></param>
+        /// <param name="route"></param>
+        /// <returns></returns>
         Uri GetPageUri(OGA.SharedKernel.QueryHelpers.PaginationFilter filter, string route);
-#elif (NET5 || NET6)
+#elif NET47
+        /// <summary>
+        /// Will create a complete URL for the given route.
+        /// </summary>
+        /// <param name="filter"></param>
+        /// <param name="route"></param>
+        /// <returns></returns>
+        Uri GetPageUri(OGA.SharedKernel.QueryHelpers.PaginationFilter filter, string route);
+#else
+        /// <summary>
+        /// Will create a complete URL for the given route.
+        /// </summary>
+        /// <param name="filter"></param>
+        /// <param name="route"></param>
+        /// <returns></returns>
         public Uri GetPageUri(OGA.SharedKernel.QueryHelpers.PaginationFilter filter, string route);
 
         /// <summary>
@@ -27,6 +47,7 @@ namespace OGA.SharedKernel.Services
         /// Will create a complete URL for the given route and list of query parameters.
         /// </summary>
         /// <param name="route"></param>
+        /// <param name="queryparms"></param>
         /// <returns></returns>
         public Uri Compose_Url_to_Route(string route, List<KeyValuePair<string, string>> queryparms);
 #endif

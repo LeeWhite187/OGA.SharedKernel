@@ -11,7 +11,13 @@ namespace OGA.SharedKernel.Config.structs
     {
         #region Public Properties
 
+        /// <summary>
+        /// Name of the configuration file (in the process folder) that holds path config for the process.
+        /// </summary>
         static public string CONSTANT_ConfigFile = "appsettings.json";
+        /// <summary>
+        /// Name of the json property, in the configuration file, that holds the path fields.
+        /// </summary>
         static public string CONSTANT_SectionName = "Paths";
 
         /// <summary>
@@ -34,6 +40,9 @@ namespace OGA.SharedKernel.Config.structs
 
         #region ctor / dtor
 
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
         public Config_AppPaths_v2()
         {
             CommonConfigPath = "";
@@ -46,6 +55,10 @@ namespace OGA.SharedKernel.Config.structs
 
         #region Public Methods
 
+        /// <summary>
+        /// Call this method to retrieve a formatted list of application path data that can be dumped to the log.
+        /// </summary>
+        /// <returns></returns>
         public string ToLogString()
         {
             StringBuilder b = new StringBuilder();

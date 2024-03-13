@@ -91,6 +91,9 @@ namespace OGA.SharedKernel.Process
 
         #region ctor / dtor
 
+        /// <summary>
+        /// Static constructor that baselines properties on first access.
+        /// </summary>
         static App_Data_v2()
         {
             Version3 = new cVersion3();
@@ -121,6 +124,11 @@ namespace OGA.SharedKernel.Process
 
         #region Public Methods
 
+        /// <summary>
+        /// Dumps command line arguments to the log.
+        /// Be sure that your Program.Main has populated the Arguments property before calling this method.
+        /// </summary>
+        /// <returns></returns>
         static public string Arguments_to_LogString()
         {
             System.Text.StringBuilder b = new System.Text.StringBuilder();

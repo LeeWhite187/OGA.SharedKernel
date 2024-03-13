@@ -8,6 +8,9 @@ namespace OGA.SharedKernel.Exceptions
     [Serializable]
     public class NotFoundException : BaseException
     {
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
         public NotFoundException()
         {
 

@@ -46,7 +46,14 @@ namespace OGA.SharedKernel.Process
     {
         #region Private Fields
 
+#if NET452
         private Exception _exc;
+#elif NET47
+        private Exception _exc;
+#else
+        private Exception? _exc;
+#endif
+
         private int _offset;
 
         #endregion
@@ -81,14 +88,32 @@ namespace OGA.SharedKernel.Process
 
         #region Public Static Methods
 
+        /// <summary>
+        /// Retrieves the ILMarker for the method that calls this method.
+        /// </summary>
+        /// <returns></returns>
         static public string Get_ILMarker_For_Current_Method()
         {
             // Use an offset of one, to skip over this method in the call stack...
             return Get_ILMarker_For_Current_Method(1);
         }
+        /// <summary>
+        /// Retrieves the ILMarker for a calling method.
+        /// Specifically, this method accepts an offset that is used to retrieve a specific caller based on its offset.
+        /// If you want to retrieve the parent method of the method that calls this method, set offset = 1.
+        /// </summary>
+        /// <param name="offset"></param>
+        /// <returns></returns>
+        /// <exception cref="Exception"></exception>
         static public string Get_ILMarker_For_Current_Method(int offset)
         {
+#if NET452
             StackTrace st = null;
+#elif NET47
+            StackTrace st = null;
+#else
+            StackTrace? st = null;
+#endif
 
             // Ensure the offset is not negative...
             if (offset < 0)
@@ -126,7 +151,13 @@ namespace OGA.SharedKernel.Process
         /// <returns></returns>
         public string To_LogString()
         {
+#if NET452
             StackTrace st = null;
+#elif NET47
+            StackTrace st = null;
+#else
+            StackTrace? st = null;
+#endif
             string strstacktrace = "";
 
             // We need to get a stack trace.
@@ -172,9 +203,14 @@ namespace OGA.SharedKernel.Process
         {
             string framestring = "";
 
+            if(frame == null)
+            {
+                return "NULL STACKFRAME";
+            }
+
             // Attempt to get the filename of the frame...
             // This will determine if PDB data is available for the frame's assembly, or not.
-            string filename = frame.GetFileName();
+            string filename = frame.GetFileName() ?? "";
 
             // Cache out the method because we will use it several times...
             var method = frame.GetMethod();
@@ -213,9 +249,20 @@ namespace OGA.SharedKernel.Process
         /// </summary>
         /// <param name="frame"></param>
         /// <returns></returns>
+#if NET452
         static private string Get_ILMarker_Entry_from_Frame(StackFrame frame)
+#elif NET47
+        static private string Get_ILMarker_Entry_from_Frame(StackFrame frame)
+#else
+        static private string Get_ILMarker_Entry_from_Frame(StackFrame? frame)
+#endif
         {
             string framestring = "";
+
+            if(frame == null)
+            {
+                return "NULL STACKFRAME";
+            }
 
             // Cache out the method because we will use it several times...
             var method = frame.GetMethod();
@@ -228,42 +275,54 @@ namespace OGA.SharedKernel.Process
             return framestring;
         }
 
+#if NET452
         static private string Format_FLMarker_Frame(System.Reflection.MethodBase method, string filename, int linenumber)
+#elif NET47
+        static private string Format_FLMarker_Frame(System.Reflection.MethodBase method, string filename, int linenumber)
+#else
+        static private string Format_FLMarker_Frame(System.Reflection.MethodBase? method, string filename, int linenumber)
+#endif
         {
             // Format the frame entry like this...
             // <Assembly>,<AssemblyVersion>,<File>,<Class>,<Method>,<LineNumber>
             string framestring = "at FLMarker:{" +
             // Assembly...
-            method.Module.Name + "," +
+            method?.Module?.Name ?? "" + "," +
             // Assembly Version...
-            method.Module.ModuleVersionId.ToString() + "," +
+            method?.Module?.ModuleVersionId.ToString() ?? "" + "," +
             // Filename...
-            filename + "," +
+            filename ?? "" + "," +
             // Class...
-            method.ReflectedType.Name + "," +
+            method?.ReflectedType?.Name ?? "" + "," +
             // Method...
-            method.Name + "," +
+            method?.Name ?? "" + "," +
             // Line Number...
             linenumber.ToString() + "}";
 
             return framestring;
         }
 
+#if NET452
         static private string Format_ILMarker_Frame(System.Reflection.MethodBase method, int iloffset)
+#elif NET47
+        static private string Format_ILMarker_Frame(System.Reflection.MethodBase method, int iloffset)
+#else
+        static private string Format_ILMarker_Frame(System.Reflection.MethodBase? method, int iloffset)
+#endif
         {
             // Format the frame entry like this...
             // <Assembly>,<AssemblyVersion>,<Module>,<Method>,<MethodToken>,<ILOffset>
             string framestring = "at ILMarker:{" +
             // Assembly...
-            method.Module.Name + "," +
+            method?.Module?.Name ?? "" + "," +
             // Assembly Version...
-            method.Module.ModuleVersionId.ToString() + "," +
+            method?.Module?.ModuleVersionId.ToString() ?? "" + "," +
             // Class...
-            method.ReflectedType.Name + "," +
+            method?.ReflectedType?.Name ?? "" + "," +
             // Method...
-            method.Name + "," +
+            method?.Name ?? "" + "," +
             // Method Token...
-            "MethodToken:0x" + method.MetadataToken.ToString("x") + "," +
+            "MethodToken:0x" + method?.MetadataToken.ToString("x") ?? "" + "," +
             // IL Offset...
             "ILOffset:0x" + iloffset.ToString("x") + "}";
 

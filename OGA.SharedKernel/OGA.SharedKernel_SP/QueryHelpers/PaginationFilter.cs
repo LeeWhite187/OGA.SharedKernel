@@ -32,6 +32,9 @@ namespace OGA.SharedKernel.QueryHelpers
 		/// </summary>
 		public int pageNumber { get; set; } = 1;
 
+		/// <summary>
+		/// Default Constructor.
+		/// </summary>
 		public PaginationFilter()
         {
 			this.pageNumber = 1;
@@ -39,6 +42,11 @@ namespace OGA.SharedKernel.QueryHelpers
 			this._pagesize = 10;
         }
 
+		/// <summary>
+		/// Call this method to pass in the page filtering (page index and page size).
+		/// </summary>
+		/// <param name="pageindex"></param>
+		/// <param name="pagesize"></param>
 		public PaginationFilter(int pageindex, int pagesize)
         {
 			// Ensure the page index is in range...

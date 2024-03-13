@@ -11,16 +11,28 @@ namespace OGA.SharedKernel.Exceptions
     [Serializable]
     public class AccessControlException : BaseException
     {
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
         public AccessControlException()
         {
 
         }
 
+        /// <summary>
+        /// Use this constructor when no inner-exception to include.
+        /// </summary>
+        /// <param name="message"></param>
         public AccessControlException(string message) : base(message)
         {
 
         }
 
+        /// <summary>
+        /// Use this constructor to include an inner-exception.
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="innerException"></param>
         public AccessControlException(string message, Exception innerException) : base(message, innerException)
         {
 

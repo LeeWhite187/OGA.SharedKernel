@@ -23,11 +23,23 @@ namespace OGA.SharedKernel.Extensions.DateandTime
             else
                 return date?.AddTicks( -((date?.Ticks ?? 0) % resolution));
         }
+        /// <summary>
+        /// Truncates the given datetime to a specific resolution of ticks.
+        /// For example: to truncate to the nearest second, set resolution = TimeSpan.TicksPerSecond.
+        /// </summary>
+        /// <param name="date"></param>
+        /// <param name="resolution"></param>
+        /// <returns></returns>
         public static DateTime Truncate(this DateTime date, long resolution)
         {
             return date.AddTicks( -(date.Ticks % resolution));
         }
 
+        /// <summary>
+        /// Truncates the given datetime to the nearest second.
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns></returns>
         public static DateTime? TruncateToSecond(this DateTime? date)
         {
             if(date == null)
@@ -35,11 +47,22 @@ namespace OGA.SharedKernel.Extensions.DateandTime
             else
                 return date.Truncate(TimeSpan.TicksPerSecond);
         }
+        /// <summary>
+        /// Truncates the given datetime to the nearest second.
+        /// Accepts the given datetime as a nullable datetime.
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns></returns>
         public static DateTime TruncateToSecond(this DateTime date)
         {
             return date.Truncate(TimeSpan.TicksPerSecond);
         }
 
+        /// <summary>
+        /// Truncates the given datetime to the nearest millisecond.
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns></returns>
         public static DateTime? TruncateToMilliSecond(this DateTime? date)
         {
             if(date == null)
@@ -47,6 +70,12 @@ namespace OGA.SharedKernel.Extensions.DateandTime
             else
                 return date.Truncate(TimeSpan.TicksPerMillisecond);
         }
+        /// <summary>
+        /// Truncates the given datetime to the nearest millisecond.
+        /// Accepts the given datetime as a nullable datetime.
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns></returns>
         public static DateTime TruncateToMilliSecond(this DateTime date)
         {
             return date.Truncate(TimeSpan.TicksPerMillisecond);
