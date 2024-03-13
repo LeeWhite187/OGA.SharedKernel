@@ -152,7 +152,7 @@ pipeline
 // As well as, logic to generate the snupkg and publish it.
 // So, we will first create a nuget package (without the Symbols switch) so it includes a pdb, and publish the nupkg file.
 // Then, we will create a nuget package again (with the Symbols switch), but we will only publish the snupkg.
-        stage('Create Nupkg w/pdb')
+        stage('Create Local Nupkg w/pdb')
 		{
            steps
 		   {
@@ -167,7 +167,7 @@ pipeline
 				sh "dotnet nuget push -s https://buildtools.ogsofttech.com:8079/v3/index.json './Publish/${projectName}.${version3}.nupkg'"
            }
 		}
-        stage('Create Nupkg w/snupkg')
+        stage('Create Local Nupkg w/snupkg')
 		{
            steps
 		   {
@@ -206,7 +206,7 @@ pipeline
 				}
            }
 		}
-        stage('Create Nupkg w/snupkg')
+        stage('Create Public Nupkg w/snupkg')
 		{
            steps
 		   {
