@@ -31,25 +31,6 @@
         <dependency id="System.Value.Tuple" version="4.5.0" exclude="Build,Analyzers" />
       </group>
     </dependencies>
-
-    <references>
-        <group targetFramework="net7.0">
-            <reference file="ref\net7.0\OGA.SharedKernel.dll" />
-        </group>
-        <group targetFramework="net6.0">
-            <reference file="ref\net6.0\OGA.SharedKernel.dll" />
-        </group>
-        <group targetFramework="net5.0">
-            <reference file="ref\net5.0\OGA.SharedKernel.dll" />
-        </group>
-        <group targetFramework="net47">
-            <reference file="ref\net47\OGA.SharedKernel.dll" />
-        </group>
-        <group targetFramework="net452">
-            <reference file="ref\net452\OGA.SharedKernel.dll" />
-        </group>
-    </references>  
-
   </metadata>
   <files>
     <file src=".\OGA.SharedKernel_NET7\bin\DebugWin\net7.0\win-x64\OGA.SharedKernel.dll" target="ref\net7.0" />
