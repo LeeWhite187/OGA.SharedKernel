@@ -2,6 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <!-- NoWarn below suppresses NETSDK1138 project-wide -->
+    <!-- This suppresses the IDE warning that NET5.0 is out of support. -->
+    <NoWarn>$(NoWarn);NETSDK1138</NoWarn>
 
     <IsPackable>false</IsPackable>
   </PropertyGroup>
