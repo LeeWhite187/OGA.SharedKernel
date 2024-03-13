@@ -69,3 +69,4 @@
     <file src=".\OGA.SharedKernel_NET452\bin\DebugLinux\net452\linux-x64\OGA.SharedKernel.pdb" target="runtimes\linux-x64\lib\net452" />
   </files>
 </package>
+
