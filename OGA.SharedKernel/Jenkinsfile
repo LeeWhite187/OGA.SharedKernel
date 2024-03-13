@@ -1,4 +1,12 @@
 // Jenkins - Build and Publish Pipeline for Cross-Platform Binaries
+//	Rev:	3
+//	Date:	20240313
+//	Changes:	Split the nuget package generation, into separate steps.
+//				This allows us to generate a nupkg file with pdb, and create a snupkg file (for a symbol server).
+//				Disabled ability to publish to Azure Artifacts.
+//				Added steps to publish to both local nuget and public nuget servers.
+//	Date:	20230821
+//	Changes:	Updated to publish pakages to Azure Artifacts.
 //	Rev:	1
 //	Date:	20220930
 //	Changes:	This version was updated to accept an additional variable from Jenkins, for the target framework.
@@ -183,12 +191,11 @@ pipeline
 		}
 // NOTE: These next steps handle public publishing of the library.
 // NOTE: These next steps will only be present for public libraries.
-        stage('Create Public Nupkg w/pdb')
+        stage('Create Public Nupkg')
 		{
            steps
 		   {
-				//sh "mono /usr/lib/nuget/nuget.exe pack ./${solutionFolder}/${projectName}.nuspec -IncludeReferencedProjects -Symbols -SymbolPackageFormat snupkg -OutputDirectory ./Publish -Verbosity detailed"
-				sh "mono /usr/lib/nuget/nuget.exe pack ./${solutionFolder}/${projectName}.nuspec -IncludeReferencedProjects -OutputDirectory ./Publish -Verbosity detailed"
+				sh "mono /usr/lib/nuget/nuget.exe pack ./${solutionFolder}/${projectName}.nuspec -IncludeReferencedProjects -Symbols -SymbolPackageFormat snupkg -OutputDirectory ./Publish -Verbosity detailed"
            }
 		}
         stage('Publish Public Nupkg')
@@ -206,29 +213,6 @@ pipeline
 				}
            }
 		}
-        stage('Create Public Nupkg w/snupkg')
-		{
-           steps
-		   {
-				sh "mono /usr/lib/nuget/nuget.exe pack ./${solutionFolder}/${projectName}.nuspec -IncludeReferencedProjects -Symbols -SymbolPackageFormat snupkg -OutputDirectory ./Publish -Verbosity detailed"
-           }
-		}
-        stage('Publish Public Snupkg')
-		{
-           steps
-		   {
-				// Retrieve the API key for pushing packages...
-				withCredentials([string(credentialsId: 'nuget.org-apikey-20230217', variable: 'NUGETAPIKEY')])
-				{
-					//set SECRET with the credential content
-					echo "My secret text is '${NUGETAPIKEY}'"
-
-					//sh "dotnet nuget push -s https://api.nuget.org/v3/index.json './Publish/${projectName}.${version3}.nupkg' --api-key ${NUGETAPIKEY}"
-					sh "dotnet nuget push -s https://api.nuget.org/v3/index.json './Publish/${projectName}.${version3}.snupkg' --api-key ${NUGETAPIKEY}"
-				}
-           }
-		}
-
 // These next steps set the version tag in GitHub...
 		stage ('Set New Version Tag')
 		{
