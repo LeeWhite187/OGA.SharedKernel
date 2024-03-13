@@ -89,6 +89,7 @@ pipeline
 				sh "dotnet /projects/tools/csprojeditor/CSProjEditor.dll set 'v${version4}' '${projectFolder}_NET47/${projectName}_NET47.csproj'"
 				sh "dotnet /projects/tools/csprojeditor/CSProjEditor.dll set 'v${version4}' '${projectFolder}_NET5/${projectName}_NET5.csproj'"
 				sh "dotnet /projects/tools/csprojeditor/CSProjEditor.dll set 'v${version4}' '${projectFolder}_NET6/${projectName}_NET6.csproj'"
+				sh "dotnet /projects/tools/csprojeditor/CSProjEditor.dll set 'v${version4}' '${projectFolder}_NET7/${projectName}_NET7.csproj'"
 			}
 		}
 //        stage('Set Version in Programcs')
@@ -117,6 +118,7 @@ pipeline
                sh "dotnet restore '${projectFolder}_NET47/${projectName}_NET47.csproj' --configfile '/projects/config/nuget/NuGet.Config'"
                sh "dotnet restore '${projectFolder}_NET5/${projectName}_NET5.csproj' --configfile '/projects/config/nuget/NuGet.Config'"
                sh "dotnet restore '${projectFolder}_NET6/${projectName}_NET6.csproj' --configfile '/projects/config/nuget/NuGet.Config'"
+               sh "dotnet restore '${projectFolder}_NET7/${projectName}_NET7.csproj' --configfile '/projects/config/nuget/NuGet.Config'"
            }
 		}
         stage('Build-Linux')
@@ -127,6 +129,7 @@ pipeline
 				sh "dotnet build '${projectFolder}_NET47/${projectName}_NET47.csproj' -c DebugLinux --runtime linux-x64 --no-self-contained"
 				sh "dotnet build '${projectFolder}_NET5/${projectName}_NET5.csproj' -c DebugLinux --runtime linux-x64 --no-self-contained"
 				sh "dotnet build '${projectFolder}_NET6/${projectName}_NET6.csproj' -c DebugLinux --runtime linux-x64 --no-self-contained"
+				sh "dotnet build '${projectFolder}_NET7/${projectName}_NET6.csproj' -c DebugLinux --runtime linux-x64 --no-self-contained"
            }
 		}
         stage('Build-Windows')
@@ -137,6 +140,7 @@ pipeline
 				sh "dotnet build '${projectFolder}_NET47/${projectName}_NET47.csproj' -c DebugWin --runtime win-x64 --no-self-contained"
 				sh "dotnet build '${projectFolder}_NET5/${projectName}_NET5.csproj' -c DebugWin --runtime win-x64 --no-self-contained"
 				sh "dotnet build '${projectFolder}_NET6/${projectName}_NET6.csproj' -c DebugWin --runtime win-x64 --no-self-contained"
+				sh "dotnet build '${projectFolder}_NET7/${projectName}_NET7.csproj' -c DebugWin --runtime win-x64 --no-self-contained"
            }
 		}
         stage('Create Nuget Package')
@@ -208,7 +212,7 @@ pipeline
 				def jobName = env.JOB_NAME
 				def buildNumber = env.BUILD_NUMBER
 
-				def requestBody =
+				notificationbody =
 				[
 					job: jobName,
 					jobtype: 'build',
@@ -237,7 +241,7 @@ pipeline
 				def jobName = env.JOB_NAME
 				def buildNumber = env.BUILD_NUMBER
 
-				def requestBody =
+				notificationbody =
 				[
 					job: jobName,
 					jobtype: 'build',

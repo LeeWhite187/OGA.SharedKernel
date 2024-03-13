@@ -13,6 +13,9 @@ dotnet build "./OGA.SharedKernel_NET5/OGA.SharedKernel_NET5.csproj" -c DebugLinu
 dotnet restore "./OGA.SharedKernel_NET6/OGA.SharedKernel_NET6.csproj"
 dotnet build "./OGA.SharedKernel_NET6/OGA.SharedKernel_NET6.csproj" -c DebugLinux --runtime linux-x64 --no-self-contained
 
+dotnet restore "./OGA.SharedKernel_NET7/OGA.SharedKernel_NET7.csproj"
+dotnet build "./OGA.SharedKernel_NET7/OGA.SharedKernel_NET7.csproj" -c DebugLinux --runtime linux-x64 --no-self-contained
+
 dotnet restore "./OGA.SharedKernel_NET452/OGA.SharedKernel_NET452.csproj"
 dotnet build "./OGA.SharedKernel_NET452/OGA.SharedKernel_NET452.csproj" -c DebugWin --runtime win-x64 --no-self-contained
 
@@ -24,6 +27,9 @@ dotnet build "./OGA.SharedKernel_NET5/OGA.SharedKernel_NET5.csproj" -c DebugWin 
 
 dotnet restore "./OGA.SharedKernel_NET6/OGA.SharedKernel_NET6.csproj"
 dotnet build "./OGA.SharedKernel_NET6/OGA.SharedKernel_NET6.csproj" -c DebugWin --runtime win-x64 --no-self-contained
+
+dotnet restore "./OGA.SharedKernel_NET7/OGA.SharedKernel_NET7.csproj"
+dotnet build "./OGA.SharedKernel_NET7/OGA.SharedKernel_NET7.csproj" -c DebugWin --runtime win-x64 --no-self-contained
 
 REM Create the composite nuget package file from built libraries...
 C:\Programs\nuget\nuget.exe pack ./OGA.SharedKernel.nuspec -IncludeReferencedProjects -symbols -SymbolPackageFormat snupkg -OutputDirectory ./Publish -Verbosity detailed
