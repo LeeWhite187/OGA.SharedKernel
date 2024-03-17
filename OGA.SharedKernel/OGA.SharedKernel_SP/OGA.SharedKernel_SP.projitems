@@ -27,7 +27,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Logging\Logging_Base.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Process\App_Data_v2.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Process\App_Data.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Process\AssemblyHelper_Base.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Process\cStackTrace.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Process\IAssemblyHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)QueryHelpers\PaginationFilter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IUriService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Serialization\Serialization_Helper.cs" />

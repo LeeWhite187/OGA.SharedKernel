@@ -9,6 +9,7 @@ namespace OGA.SharedKernel
 {
     /// <summary>
     /// Logging Reference, placed in Shared Kernel, for process-wide logging.
+    /// Logging has been implemented this way (as a bottom-layer static ref), for processes that don't have a DI registry to pull from.
     /// </summary>
     public class Logging_Base
     {
@@ -17,19 +18,19 @@ namespace OGA.SharedKernel
 #if NET452
         /// <summary>
         /// Global Logging Reference.
-        /// Is set during process startup, so there is a global logging reference if needed, without the fuss or instanciation latency and indirection of DI.
+        /// Is set during process startup, so there is a global logging reference if needed, without the fuss or instantiation latency and indirection of DI.
         /// </summary>
         static public NLog.Logger Logger_Ref { get; set; }
 #elif NET47
         /// <summary>
         /// Global Logging Reference.
-        /// Is set during process startup, so there is a global logging reference if needed, without the fuss or instanciation latency and indirection of DI.
+        /// Is set during process startup, so there is a global logging reference if needed, without the fuss or instantiation latency and indirection of DI.
         /// </summary>
         static public NLog.Logger Logger_Ref { get; set; }
 #else
         /// <summary>
         /// Global Logging Reference.
-        /// Is set during process startup, so there is a global logging reference if needed, without the fuss or instanciation latency and indirection of DI.
+        /// Is set during process startup, so there is a global logging reference if needed, without the fuss or instantiation latency and indirection of DI.
         /// </summary>
         static public NLog.Logger Logger_Ref { get; set; }
 #endif
@@ -40,7 +41,7 @@ namespace OGA.SharedKernel
 
         /// <summary>
         /// This static constructor added, to ensure the LoggerRef property always returns an instance.
-        /// NOTE: Your code MUST still perform propert logging setup, as this was not intended to create the default logger instance.
+        /// NOTE: Your code MUST still perform proper logging setup, as this was not intended to create the default logger instance.
         /// NOTE: It is merely satisfying the compiler warning that props must be non-null at constructor exit, and the edge case that calls to the logger without proper setup will throw.
         /// </summary>
         static Logging_Base()
