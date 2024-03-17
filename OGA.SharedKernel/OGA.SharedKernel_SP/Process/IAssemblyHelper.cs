@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace OGA.SharedKernel_SP.Process
+namespace OGA.SharedKernel.Process
 {
     /// <summary>
     /// Assembly Helper class interface that exposes method calls used for searching process dependencies for controllers, map configs, exception types, config derivatives, etc.

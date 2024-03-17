@@ -4,7 +4,7 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace OGA.SharedKernel_SP.Process
+namespace OGA.SharedKernel.Process
 {
     /// <summary>
     /// This class provides a central point for accessing process binary library metadata.
