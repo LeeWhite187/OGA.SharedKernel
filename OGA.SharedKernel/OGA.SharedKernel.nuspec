@@ -10,8 +10,9 @@
     <description>Base Exceptions, attributes, config and process globals, and a few other elements that are used by all projects.</description>
     <releaseNotes>(Please write the package release notes in "OGA.SharedKernel-RELEASE-NOTES.txt".)</releaseNotes>
     <copyright>$copyright$</copyright>
-	<repository type="git" url="https://github.com/LeeWhite187/OGA.SharedKernel" />
+	  <repository type="git" url="https://github.com/LeeWhite187/OGA.SharedKernel" />
     <license type="expression">MIT</license>
+    <readme>docs\README.md</readme>
 
     <dependencies>
       <group targetFramework="net7.0">
@@ -33,6 +34,8 @@
     </dependencies>
   </metadata>
   <files>
+    <file src="..\README.md" target="docs\" />
+
     <file src=".\OGA.SharedKernel_NET7\bin\DebugWin\net7.0\win-x64\OGA.SharedKernel.dll" target="ref\net7.0" />
     <file src=".\OGA.SharedKernel_NET7\bin\DebugWin\net7.0\win-x64\OGA.SharedKernel.xml" target="ref\net7.0" />
     <file src=".\OGA.SharedKernel_NET7\bin\DebugWin\net7.0\win-x64\OGA.SharedKernel.dll" target="runtimes\win-x64\lib\net7.0" />
