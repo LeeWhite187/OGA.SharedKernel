@@ -26,6 +26,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6128A467
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{58491899-49A6-4EF9-8584-B04FE8EB8C72}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OGA.SharedKernel_NET48", "OGA.SharedKernel_NET48\OGA.SharedKernel_NET48.csproj", "{9B7A4F31-E68E-4C2F-AE5E-98F7329373B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -108,6 +110,18 @@ Global
 		{E551A3D7-46B3-4B4B-B056-BA9D1FD1546B}.ReleaseLinux|Any CPU.Build.0 = ReleaseLinux|Any CPU
 		{E551A3D7-46B3-4B4B-B056-BA9D1FD1546B}.ReleaseWin|Any CPU.ActiveCfg = ReleaseWin|Any CPU
 		{E551A3D7-46B3-4B4B-B056-BA9D1FD1546B}.ReleaseWin|Any CPU.Build.0 = ReleaseWin|Any CPU
+		{9B7A4F31-E68E-4C2F-AE5E-98F7329373B7}.Debug|Any CPU.ActiveCfg = DebugWin|Any CPU
+		{9B7A4F31-E68E-4C2F-AE5E-98F7329373B7}.Debug|Any CPU.Build.0 = DebugWin|Any CPU
+		{9B7A4F31-E68E-4C2F-AE5E-98F7329373B7}.DebugLinux|Any CPU.ActiveCfg = DebugLinux|Any CPU
+		{9B7A4F31-E68E-4C2F-AE5E-98F7329373B7}.DebugLinux|Any CPU.Build.0 = DebugLinux|Any CPU
+		{9B7A4F31-E68E-4C2F-AE5E-98F7329373B7}.DebugWin|Any CPU.ActiveCfg = DebugWin|Any CPU
+		{9B7A4F31-E68E-4C2F-AE5E-98F7329373B7}.DebugWin|Any CPU.Build.0 = DebugWin|Any CPU
+		{9B7A4F31-E68E-4C2F-AE5E-98F7329373B7}.Release|Any CPU.ActiveCfg = ReleaseWin|Any CPU
+		{9B7A4F31-E68E-4C2F-AE5E-98F7329373B7}.Release|Any CPU.Build.0 = ReleaseWin|Any CPU
+		{9B7A4F31-E68E-4C2F-AE5E-98F7329373B7}.ReleaseLinux|Any CPU.ActiveCfg = ReleaseLinux|Any CPU
+		{9B7A4F31-E68E-4C2F-AE5E-98F7329373B7}.ReleaseLinux|Any CPU.Build.0 = ReleaseLinux|Any CPU
+		{9B7A4F31-E68E-4C2F-AE5E-98F7329373B7}.ReleaseWin|Any CPU.ActiveCfg = ReleaseWin|Any CPU
+		{9B7A4F31-E68E-4C2F-AE5E-98F7329373B7}.ReleaseWin|Any CPU.Build.0 = ReleaseWin|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -120,6 +134,7 @@ Global
 		{3E418A57-D8EF-43B9-B801-398B04BA4BB2} = {58491899-49A6-4EF9-8584-B04FE8EB8C72}
 		{559DB5C7-1C47-4F75-AFA9-B63082E02DAE} = {6128A467-3392-4066-AA6D-9091474D5457}
 		{E551A3D7-46B3-4B4B-B056-BA9D1FD1546B} = {58491899-49A6-4EF9-8584-B04FE8EB8C72}
+		{9B7A4F31-E68E-4C2F-AE5E-98F7329373B7} = {58491899-49A6-4EF9-8584-B04FE8EB8C72}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {40937BB3-C40A-4A8C-8D8B-8BAB34630A08}
@@ -129,6 +144,7 @@ Global
 		OGA.SharedKernel_SP\OGA.SharedKernel_SP.projitems*{23a2ccd7-3957-4e92-bdf0-c7f9b45f7b10}*SharedItemsImports = 5
 		OGA.SharedKernel_SP\OGA.SharedKernel_SP.projitems*{3e418a57-d8ef-43b9-b801-398b04ba4bb2}*SharedItemsImports = 5
 		OGA.SharedKernel_SP\OGA.SharedKernel_SP.projitems*{60defcad-5bfc-4f61-b64f-833e7c5ddf16}*SharedItemsImports = 13
+		OGA.SharedKernel_SP\OGA.SharedKernel_SP.projitems*{9b7a4f31-e68e-4c2f-ae5e-98f7329373b7}*SharedItemsImports = 5
 		OGA.SharedKernel_SP\OGA.SharedKernel_SP.projitems*{d74cfec4-cee3-48ad-a3ae-2dce21aaa61e}*SharedItemsImports = 5
 		OGA.SharedKernel_SP\OGA.SharedKernel_SP.projitems*{e551a3d7-46b3-4b4b-b056-ba9d1fd1546b}*SharedItemsImports = 5
 	EndGlobalSection

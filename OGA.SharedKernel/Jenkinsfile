@@ -96,6 +96,7 @@ pipeline
 			{
 				sh "dotnet /projects/tools/csprojeditor/CSProjEditor.dll set 'v${version4}' '${projectFolder}_NET452/${projectName}_NET452.csproj'"
 				sh "dotnet /projects/tools/csprojeditor/CSProjEditor.dll set 'v${version4}' '${projectFolder}_NET47/${projectName}_NET47.csproj'"
+				sh "dotnet /projects/tools/csprojeditor/CSProjEditor.dll set 'v${version4}' '${projectFolder}_NET48/${projectName}_NET48.csproj'"
 				sh "dotnet /projects/tools/csprojeditor/CSProjEditor.dll set 'v${version4}' '${projectFolder}_NET5/${projectName}_NET5.csproj'"
 				sh "dotnet /projects/tools/csprojeditor/CSProjEditor.dll set 'v${version4}' '${projectFolder}_NET6/${projectName}_NET6.csproj'"
 				sh "dotnet /projects/tools/csprojeditor/CSProjEditor.dll set 'v${version4}' '${projectFolder}_NET7/${projectName}_NET7.csproj'"
@@ -108,6 +109,7 @@ pipeline
 //			{
 //				sh "dotnet /projects/tools/programcseditor/ProgramcsEditor.dll set 'v${version4}' '${projectFolder}_NET452/${projectName}_NET452.csproj'"
 //				sh "dotnet /projects/tools/programcseditor/ProgramcsEditor.dll set 'v${version4}' '${projectFolder}_NET47/${projectName}_NET47.csproj'"
+//				sh "dotnet /projects/tools/programcseditor/ProgramcsEditor.dll set 'v${version4}' '${projectFolder}_NET48/${projectName}_NET48.csproj'"
 //				sh "dotnet /projects/tools/programcseditor/ProgramcsEditor.dll set 'v${version4}' '${projectFolder}_NET5/${projectName}_NET5.csproj'"
 //				sh "dotnet /projects/tools/programcseditor/ProgramcsEditor.dll set 'v${version4}' '${projectFolder}_NET6/${projectName}_NET6.csproj'"
 //			}
@@ -125,6 +127,7 @@ pipeline
 		   {
                sh "dotnet restore '${projectFolder}_NET452/${projectName}_NET452.csproj' --configfile '/projects/config/nuget/NuGet.Config'"
                sh "dotnet restore '${projectFolder}_NET47/${projectName}_NET47.csproj' --configfile '/projects/config/nuget/NuGet.Config'"
+               sh "dotnet restore '${projectFolder}_NET48/${projectName}_NET48.csproj' --configfile '/projects/config/nuget/NuGet.Config'"
                sh "dotnet restore '${projectFolder}_NET5/${projectName}_NET5.csproj' --configfile '/projects/config/nuget/NuGet.Config'"
                sh "dotnet restore '${projectFolder}_NET6/${projectName}_NET6.csproj' --configfile '/projects/config/nuget/NuGet.Config'"
                sh "dotnet restore '${projectFolder}_NET7/${projectName}_NET7.csproj' --configfile '/projects/config/nuget/NuGet.Config'"
@@ -136,6 +139,7 @@ pipeline
 		   {
 				sh "dotnet build '${projectFolder}_NET452/${projectName}_NET452.csproj' -c DebugLinux --runtime linux-x64 --no-self-contained"
 				sh "dotnet build '${projectFolder}_NET47/${projectName}_NET47.csproj' -c DebugLinux --runtime linux-x64 --no-self-contained"
+				sh "dotnet build '${projectFolder}_NET48/${projectName}_NET48.csproj' -c DebugLinux --runtime linux-x64 --no-self-contained"
 				sh "dotnet build '${projectFolder}_NET5/${projectName}_NET5.csproj' -c DebugLinux --runtime linux-x64 --no-self-contained"
 				sh "dotnet build '${projectFolder}_NET6/${projectName}_NET6.csproj' -c DebugLinux --runtime linux-x64 --no-self-contained"
 				sh "dotnet build '${projectFolder}_NET7/${projectName}_NET7.csproj' -c DebugLinux --runtime linux-x64 --no-self-contained"
@@ -147,6 +151,7 @@ pipeline
 		   {
 				sh "dotnet build '${projectFolder}_NET452/${projectName}_NET452.csproj' -c DebugWin --runtime win-x64 --no-self-contained"
 				sh "dotnet build '${projectFolder}_NET47/${projectName}_NET47.csproj' -c DebugWin --runtime win-x64 --no-self-contained"
+				sh "dotnet build '${projectFolder}_NET48/${projectName}_NET48.csproj' -c DebugWin --runtime win-x64 --no-self-contained"
 				sh "dotnet build '${projectFolder}_NET5/${projectName}_NET5.csproj' -c DebugWin --runtime win-x64 --no-self-contained"
 				sh "dotnet build '${projectFolder}_NET6/${projectName}_NET6.csproj' -c DebugWin --runtime win-x64 --no-self-contained"
 				sh "dotnet build '${projectFolder}_NET7/${projectName}_NET7.csproj' -c DebugWin --runtime win-x64 --no-self-contained"

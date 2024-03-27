@@ -24,6 +24,9 @@
       <group targetFramework="net5.0">
         <dependency id="NLog" version="5.0.4" exclude="Build,Analyzers" />
       </group>
+      <group targetFramework=".NETFramework4.8">
+        <dependency id="NLog" version="5.0.4" exclude="Build,Analyzers" />
+      </group>
       <group targetFramework=".NETFramework4.7">
         <dependency id="NLog" version="5.0.4" exclude="Build,Analyzers" />
       </group>
@@ -56,6 +59,13 @@
     <file src=".\OGA.SharedKernel_NET5\bin\DebugWin\net5.0\win-x64\OGA.SharedKernel.pdb" target="runtimes\win-x64\lib\net5.0" />
     <file src=".\OGA.SharedKernel_NET5\bin\DebugLinux\net5.0\linux-x64\OGA.SharedKernel.dll" target="runtimes\linux-x64\lib\net5.0" />
     <file src=".\OGA.SharedKernel_NET5\bin\DebugLinux\net5.0\linux-x64\OGA.SharedKernel.pdb" target="runtimes\linux-x64\lib\net5.0" />
+
+    <file src=".\OGA.SharedKernel_NET48\bin\DebugWin\net48\win-x64\OGA.SharedKernel.dll" target="ref\net48" />
+    <file src=".\OGA.SharedKernel_NET48\bin\DebugWin\net48\win-x64\OGA.SharedKernel.xml" target="ref\net48" />
+    <file src=".\OGA.SharedKernel_NET48\bin\DebugWin\net48\win-x64\OGA.SharedKernel.dll" target="runtimes\win-x64\lib\net48" />
+    <file src=".\OGA.SharedKernel_NET48\bin\DebugWin\net48\win-x64\OGA.SharedKernel.pdb" target="runtimes\win-x64\lib\net48" />
+    <file src=".\OGA.SharedKernel_NET48\bin\DebugLinux\net48\linux-x64\OGA.SharedKernel.dll" target="runtimes\linux-x64\lib\net48" />
+    <file src=".\OGA.SharedKernel_NET48\bin\DebugLinux\net48\linux-x64\OGA.SharedKernel.pdb" target="runtimes\linux-x64\lib\net48" />
 
     <file src=".\OGA.SharedKernel_NET47\bin\DebugWin\net47\win-x64\OGA.SharedKernel.dll" target="ref\net47" />
     <file src=".\OGA.SharedKernel_NET47\bin\DebugWin\net47\win-x64\OGA.SharedKernel.xml" target="ref\net47" />

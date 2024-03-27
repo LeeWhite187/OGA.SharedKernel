@@ -13,9 +13,7 @@ namespace OGA.SharedKernel.Version
     /// Adapted from System.Version class.
     /// </summary>
     [Serializable]
-#if NET452
-    public sealed class cVersion3 : ICloneable, IComparable, IComparable<cVersion3>, IEquatable<cVersion3>
-#elif NET47
+#if (NET452 || NET47 || NET48)
     public sealed class cVersion3 : ICloneable, IComparable, IComparable<cVersion3>, IEquatable<cVersion3>
 #else
     public sealed class cVersion3 : ICloneable, IComparable, IComparable<cVersion3?>, IEquatable<cVersion3?>
@@ -149,15 +147,7 @@ namespace OGA.SharedKernel.Version
             return new cVersion3(this);
         }
 
-#if NET452
-        /// <summary>
-        /// Implementation of the IComparable interface.
-        /// </summary>
-        /// <param name="version"></param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentException"></exception>
-        public int CompareTo(object version)
-#elif NET47
+#if (NET452 || NET47 || NET48)
         /// <summary>
         /// Implementation of the IComparable interface.
         /// </summary>
@@ -188,14 +178,7 @@ namespace OGA.SharedKernel.Version
             throw new ArgumentException("Invalid Version Instance.");
         }
 
-#if NET452
-        /// <summary>
-        /// Implementation of the IComparable interface.
-        /// </summary>
-        /// <param name="value"></param>
-        /// <returns></returns>
-        public int CompareTo(cVersion3 value)
-#elif NET47
+#if (NET452 || NET47 || NET48)
         /// <summary>
         /// Implementation of the IComparable interface.
         /// </summary>
@@ -225,14 +208,7 @@ namespace OGA.SharedKernel.Version
                 0;
         }
 
-#if NET452
-        /// <summary>
-        /// Implementation of the IEquatable interface.
-        /// </summary>
-        /// <param name="obj"></param>
-        /// <returns></returns>
-        public override bool Equals(object obj)
-#elif NET47
+#if (NET452 || NET47 || NET48)
         /// <summary>
         /// Implementation of the IEquatable interface.
         /// </summary>
@@ -251,14 +227,7 @@ namespace OGA.SharedKernel.Version
             return Equals(obj as cVersion3);
         }
 
-#if NET452
-        /// <summary>
-        /// Implementation of the IEquatable interface.
-        /// </summary>
-        /// <param name="obj"></param>
-        /// <returns></returns>
-        public bool Equals(cVersion3 obj)
-#elif NET47
+#if (NET452 || NET47 || NET48)
         /// <summary>
         /// Implementation of the IEquatable interface.
         /// </summary>
@@ -322,26 +291,14 @@ namespace OGA.SharedKernel.Version
                 throw new ArgumentNullException(nameof(input));
             }
 
-#if NET452
-            return ParseVersion(input, throwOnFailure: true);
-#elif NET47
+#if (NET452 || NET47 || NET48)
             return ParseVersion(input, throwOnFailure: true);
 #else
             return ParseVersion(input, throwOnFailure: true)!;
 #endif
         }
 
-#if NET452
-        /// <summary>
-        /// Public method that attempts to create a Version3 instance from a given version3 string.
-        /// Returns true if successful.
-        /// False if failed.
-        /// </summary>
-        /// <param name="input"></param>
-        /// <param name="result"></param>
-        /// <returns></returns>
-        public static bool TryParse(string input, out cVersion3 result)
-#elif NET47
+#if (NET452 || NET47 || NET48)
         /// <summary>
         /// Public method that attempts to create a Version3 instance from a given version3 string.
         /// Returns true if successful.
@@ -388,9 +345,7 @@ namespace OGA.SharedKernel.Version
         /// <returns></returns>
         // Force inline as the true/false ternary takes it above ALWAYS_INLINE size even though the asm ends up smaller
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#if NET452
-        public static bool operator ==(cVersion3 v1, cVersion3 v2)
-#elif NET47
+#if (NET452 || NET47 || NET48)
         public static bool operator ==(cVersion3 v1, cVersion3 v2)
 #else
         public static bool operator ==(cVersion3? v1, cVersion3? v2)
@@ -408,15 +363,7 @@ namespace OGA.SharedKernel.Version
             return ReferenceEquals(v2, v1) ? true : v2.Equals(v1);
         }
 
-#if NET452
-        /// <summary>
-        /// Implements the IEquatable interface, same as the native Version class.
-        /// </summary>
-        /// <param name="v1"></param>
-        /// <param name="v2"></param>
-        /// <returns></returns>
-        public static bool operator !=(cVersion3 v1, cVersion3 v2) => !(v1 == v2);
-#elif NET47
+#if (NET452 || NET47 || NET48)
         /// <summary>
         /// Implements the IEquatable interface, same as the native Version class.
         /// </summary>
@@ -435,15 +382,7 @@ namespace OGA.SharedKernel.Version
 #endif
 
 
-#if NET452
-        /// <summary>
-        /// Implements the IEquatable interface, same as the native Version class.
-        /// </summary>
-        /// <param name="v1"></param>
-        /// <param name="v2"></param>
-        /// <returns></returns>
-        public static bool operator <(cVersion3 v1, cVersion3 v2)
-#elif NET47
+#if (NET452 || NET47 || NET48)
         /// <summary>
         /// Implements the IEquatable interface, same as the native Version class.
         /// </summary>
@@ -469,15 +408,7 @@ namespace OGA.SharedKernel.Version
             return v1.CompareTo(v2) < 0;
         }
 
-#if NET452
-        /// <summary>
-        /// Implements the IEquatable interface, same as the native Version class.
-        /// </summary>
-        /// <param name="v1"></param>
-        /// <param name="v2"></param>
-        /// <returns></returns>
-        public static bool operator <=(cVersion3 v1, cVersion3 v2)
-#elif NET47
+#if (NET452 || NET47 || NET48)
         /// <summary>
         /// Implements the IEquatable interface, same as the native Version class.
         /// </summary>
@@ -503,15 +434,7 @@ namespace OGA.SharedKernel.Version
             return v1.CompareTo(v2) <= 0;
         }
 
-#if NET452
-        /// <summary>
-        /// Implements the IEquatable interface, same as the native Version class.
-        /// </summary>
-        /// <param name="v1"></param>
-        /// <param name="v2"></param>
-        /// <returns></returns>
-        public static bool operator >(cVersion3 v1, cVersion3 v2) => v2 < v1;
-#elif NET47
+#if (NET452 || NET47 || NET48)
         /// <summary>
         /// Implements the IEquatable interface, same as the native Version class.
         /// </summary>
@@ -529,15 +452,7 @@ namespace OGA.SharedKernel.Version
         public static bool operator >(cVersion3? v1, cVersion3? v2) => v2 < v1;
 #endif
 
-#if NET452
-        /// <summary>
-        /// Implements the IEquatable interface, same as the native Version class.
-        /// </summary>
-        /// <param name="v1"></param>
-        /// <param name="v2"></param>
-        /// <returns></returns>
-        public static bool operator >=(cVersion3 v1, cVersion3 v2) => v2 <= v1;
-#elif NET47
+#if (NET452 || NET47 || NET48)
         /// <summary>
         /// Implements the IEquatable interface, same as the native Version class.
         /// </summary>
@@ -567,9 +482,7 @@ namespace OGA.SharedKernel.Version
         /// <param name="throwOnFailure"></param>
         /// <returns></returns>
         /// <exception cref="ArgumentException"></exception>
-#if NET452
-        private static cVersion3 ParseVersion(string input, bool throwOnFailure)
-#elif NET47
+#if (NET452 || NET47 || NET48)
         private static cVersion3 ParseVersion(string input, bool throwOnFailure)
 #else
         private static cVersion3? ParseVersion(string input, bool throwOnFailure)
@@ -585,9 +498,7 @@ namespace OGA.SharedKernel.Version
             }
 
             // Split the version string into parts...
-#if NET452
-            string[] pieces = input.Split(new char[] { '.' }, StringSplitOptions.RemoveEmptyEntries);
-#elif NET47
+#if (NET452 || NET47 || NET48)
             string[] pieces = input.Split(new char[] { '.' }, StringSplitOptions.RemoveEmptyEntries);
 #else
             string[] pieces = input.Split('.', StringSplitOptions.RemoveEmptyEntries);

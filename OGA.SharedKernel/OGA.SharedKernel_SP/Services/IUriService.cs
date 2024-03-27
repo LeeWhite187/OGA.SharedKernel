@@ -12,15 +12,7 @@ namespace OGA.SharedKernel.Services
     /// </summary>
     public interface IUriService
     {
-#if NET452
-        /// <summary>
-        /// Will create a complete URL for the given route.
-        /// </summary>
-        /// <param name="filter"></param>
-        /// <param name="route"></param>
-        /// <returns></returns>
-        Uri GetPageUri(OGA.SharedKernel.QueryHelpers.PaginationFilter filter, string route);
-#elif NET47
+#if (NET452 || NET47 || NET48)
         /// <summary>
         /// Will create a complete URL for the given route.
         /// </summary>

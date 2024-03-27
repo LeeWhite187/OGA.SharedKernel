@@ -46,9 +46,7 @@ namespace OGA.SharedKernel.Process
     {
         #region Private Fields
 
-#if NET452
-        private Exception _exc;
-#elif NET47
+#if (NET452 || NET47 || NET48)
         private Exception _exc;
 #else
         private Exception? _exc;
@@ -107,9 +105,7 @@ namespace OGA.SharedKernel.Process
         /// <exception cref="Exception"></exception>
         static public string Get_ILMarker_For_Current_Method(int offset)
         {
-#if NET452
-            StackTrace st = null;
-#elif NET47
+#if (NET452 || NET47 || NET48)
             StackTrace st = null;
 #else
             StackTrace? st = null;
@@ -151,9 +147,7 @@ namespace OGA.SharedKernel.Process
         /// <returns></returns>
         public string To_LogString()
         {
-#if NET452
-            StackTrace st = null;
-#elif NET47
+#if (NET452 || NET47 || NET48)
             StackTrace st = null;
 #else
             StackTrace? st = null;
@@ -249,9 +243,7 @@ namespace OGA.SharedKernel.Process
         /// </summary>
         /// <param name="frame"></param>
         /// <returns></returns>
-#if NET452
-        static private string Get_ILMarker_Entry_from_Frame(StackFrame frame)
-#elif NET47
+#if (NET452 || NET47 || NET48)
         static private string Get_ILMarker_Entry_from_Frame(StackFrame frame)
 #else
         static private string Get_ILMarker_Entry_from_Frame(StackFrame? frame)
@@ -275,9 +267,7 @@ namespace OGA.SharedKernel.Process
             return framestring;
         }
 
-#if NET452
-        static private string Format_FLMarker_Frame(System.Reflection.MethodBase method, string filename, int linenumber)
-#elif NET47
+#if (NET452 || NET47 || NET48)
         static private string Format_FLMarker_Frame(System.Reflection.MethodBase method, string filename, int linenumber)
 #else
         static private string Format_FLMarker_Frame(System.Reflection.MethodBase? method, string filename, int linenumber)
@@ -302,9 +292,7 @@ namespace OGA.SharedKernel.Process
             return framestring;
         }
 
-#if NET452
-        static private string Format_ILMarker_Frame(System.Reflection.MethodBase method, int iloffset)
-#elif NET47
+#if (NET452 || NET47 || NET48)
         static private string Format_ILMarker_Frame(System.Reflection.MethodBase method, int iloffset)
 #else
         static private string Format_ILMarker_Frame(System.Reflection.MethodBase? method, int iloffset)

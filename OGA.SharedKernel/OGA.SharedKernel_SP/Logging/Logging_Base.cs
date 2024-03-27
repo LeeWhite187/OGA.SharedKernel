@@ -15,13 +15,7 @@ namespace OGA.SharedKernel
     {
         #region Public Properties
 
-#if NET452
-        /// <summary>
-        /// Global Logging Reference.
-        /// Is set during process startup, so there is a global logging reference if needed, without the fuss or instantiation latency and indirection of DI.
-        /// </summary>
-        static public NLog.Logger Logger_Ref { get; set; }
-#elif NET47
+#if (NET452 || NET47 || NET48)
         /// <summary>
         /// Global Logging Reference.
         /// Is set during process startup, so there is a global logging reference if needed, without the fuss or instantiation latency and indirection of DI.
@@ -60,9 +54,7 @@ namespace OGA.SharedKernel
         /// </summary>
         /// <param name="caller"></param>
         /// <returns></returns>
-#if NET452
-        static public string GetCallerName([CallerMemberName] string caller = null)
-#elif NET47
+#if (NET452 || NET47 || NET48)
         static public string GetCallerName([CallerMemberName] string caller = null)
 #else
         static public string? GetCallerName([CallerMemberName] string? caller = null)
