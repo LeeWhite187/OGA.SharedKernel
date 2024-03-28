@@ -1,41 +1,45 @@
 REM OGA Shared Kernel Library
 
 REM Build the library...
-dotnet restore "./OGA.SharedKernel_NET452/OGA.SharedKernel_NET452.csproj"
-dotnet build "./OGA.SharedKernel_NET452/OGA.SharedKernel_NET452.csproj" -c DebugLinux --runtime linux --no-self-contained
-
-dotnet restore "./OGA.SharedKernel_NET47/OGA.SharedKernel_NET47.csproj"
-dotnet build "./OGA.SharedKernel_NET47/OGA.SharedKernel_NET47.csproj" -c DebugLinux --runtime linux --no-self-contained
-
-dotnet restore "./OGA.SharedKernel_NET48/OGA.SharedKernel_NET48.csproj"
-dotnet build "./OGA.SharedKernel_NET48/OGA.SharedKernel_NET48.csproj" -c DebugLinux --runtime linux --no-self-contained
-
 dotnet restore "./OGA.SharedKernel_NET5/OGA.SharedKernel_NET5.csproj"
-dotnet build "./OGA.SharedKernel_NET5/OGA.SharedKernel_NET5.csproj" -c DebugLinux --runtime linux --no-self-contained
+dotnet build "./OGA.SharedKernel_NET5/OGA.SharedKernel_NET5.csproj" -c DebugLinux --runtime linux-x64 --no-self-contained
+dotnet build "./OGA.SharedKernel_NET5/OGA.SharedKernel_NET5.csproj" -c DebugLinux --runtime linux-arm --no-self-contained
+dotnet build "./OGA.SharedKernel_NET5/OGA.SharedKernel_NET5.csproj" -c DebugLinux --runtime linux-arm64 --no-self-contained
 
 dotnet restore "./OGA.SharedKernel_NET6/OGA.SharedKernel_NET6.csproj"
-dotnet build "./OGA.SharedKernel_NET6/OGA.SharedKernel_NET6.csproj" -c DebugLinux --runtime linux --no-self-contained
+dotnet build "./OGA.SharedKernel_NET6/OGA.SharedKernel_NET6.csproj" -c DebugLinux --runtime linux-x64 --no-self-contained
+dotnet build "./OGA.SharedKernel_NET6/OGA.SharedKernel_NET6.csproj" -c DebugLinux --runtime linux-arm --no-self-contained
+dotnet build "./OGA.SharedKernel_NET6/OGA.SharedKernel_NET6.csproj" -c DebugLinux --runtime linux-arm64 --no-self-contained
 
 dotnet restore "./OGA.SharedKernel_NET7/OGA.SharedKernel_NET7.csproj"
-dotnet build "./OGA.SharedKernel_NET7/OGA.SharedKernel_NET7.csproj" -c DebugLinux --runtime linux --no-self-contained
+dotnet build "./OGA.SharedKernel_NET7/OGA.SharedKernel_NET7.csproj" -c DebugLinux --runtime linux-x64 --no-self-contained
+dotnet build "./OGA.SharedKernel_NET7/OGA.SharedKernel_NET7.csproj" -c DebugLinux --runtime linux-arm --no-self-contained
+dotnet build "./OGA.SharedKernel_NET7/OGA.SharedKernel_NET7.csproj" -c DebugLinux --runtime linux-arm64 --no-self-contained
 
 dotnet restore "./OGA.SharedKernel_NET452/OGA.SharedKernel_NET452.csproj"
-dotnet build "./OGA.SharedKernel_NET452/OGA.SharedKernel_NET452.csproj" -c DebugWin --runtime win --no-self-contained
+dotnet build "./OGA.SharedKernel_NET452/OGA.SharedKernel_NET452.csproj" -c DebugWin --runtime win-x64 --no-self-contained
+dotnet build "./OGA.SharedKernel_NET452/OGA.SharedKernel_NET452.csproj" -c DebugWin --runtime win-x86 --no-self-contained
+dotnet build "./OGA.SharedKernel_NET452/OGA.SharedKernel_NET452.csproj" -c DebugWin --runtime win-arm64 --no-self-contained
 
 dotnet restore "./OGA.SharedKernel_NET47/OGA.SharedKernel_NET47.csproj"
-dotnet build "./OGA.SharedKernel_NET47/OGA.SharedKernel_NET47.csproj" -c DebugWin --runtime win --no-self-contained
+dotnet build "./OGA.SharedKernel_NET47/OGA.SharedKernel_NET47.csproj" -c DebugWin --runtime win-x64 --no-self-contained
+dotnet build "./OGA.SharedKernel_NET47/OGA.SharedKernel_NET47.csproj" -c DebugWin --runtime win-x86 --no-self-contained
 
 dotnet restore "./OGA.SharedKernel_NET48/OGA.SharedKernel_NET48.csproj"
-dotnet build "./OGA.SharedKernel_NET48/OGA.SharedKernel_NET48.csproj" -c DebugWin --runtime win --no-self-contained
+dotnet build "./OGA.SharedKernel_NET48/OGA.SharedKernel_NET48.csproj" -c DebugWin --runtime win-x64 --no-self-contained
+dotnet build "./OGA.SharedKernel_NET48/OGA.SharedKernel_NET48.csproj" -c DebugWin --runtime win-x86 --no-self-contained
 
 dotnet restore "./OGA.SharedKernel_NET5/OGA.SharedKernel_NET5.csproj"
-dotnet build "./OGA.SharedKernel_NET5/OGA.SharedKernel_NET5.csproj" -c DebugWin --runtime win --no-self-contained
+dotnet build "./OGA.SharedKernel_NET5/OGA.SharedKernel_NET5.csproj" -c DebugWin --runtime win-x64 --no-self-contained
+dotnet build "./OGA.SharedKernel_NET5/OGA.SharedKernel_NET5.csproj" -c DebugWin --runtime win-x86 --no-self-contained
 
 dotnet restore "./OGA.SharedKernel_NET6/OGA.SharedKernel_NET6.csproj"
-dotnet build "./OGA.SharedKernel_NET6/OGA.SharedKernel_NET6.csproj" -c DebugWin --runtime win --no-self-contained
+dotnet build "./OGA.SharedKernel_NET6/OGA.SharedKernel_NET6.csproj" -c DebugWin --runtime win-x64 --no-self-contained
+dotnet build "./OGA.SharedKernel_NET6/OGA.SharedKernel_NET6.csproj" -c DebugWin --runtime win-x86 --no-self-contained
 
 dotnet restore "./OGA.SharedKernel_NET7/OGA.SharedKernel_NET7.csproj"
-dotnet build "./OGA.SharedKernel_NET7/OGA.SharedKernel_NET7.csproj" -c DebugWin --runtime win --no-self-contained
+dotnet build "./OGA.SharedKernel_NET7/OGA.SharedKernel_NET7.csproj" -c DebugWin --runtime win-x64 --no-self-contained
+dotnet build "./OGA.SharedKernel_NET7/OGA.SharedKernel_NET7.csproj" -c DebugWin --runtime win-x86 --no-self-contained
 
 REM Create the composite nuget package file from built libraries...
 C:\Programs\nuget\nuget.exe pack ./OGA.SharedKernel.nuspec -IncludeReferencedProjects -symbols -SymbolPackageFormat snupkg -OutputDirectory ./Publish -Verbosity detailed
