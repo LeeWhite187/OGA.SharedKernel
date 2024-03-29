@@ -19,7 +19,6 @@ dotnet build "./OGA.SharedKernel_NET7/OGA.SharedKernel_NET7.csproj" -c DebugLinu
 dotnet restore "./OGA.SharedKernel_NET452/OGA.SharedKernel_NET452.csproj"
 dotnet build "./OGA.SharedKernel_NET452/OGA.SharedKernel_NET452.csproj" -c DebugWin --runtime win-x64 --no-self-contained
 dotnet build "./OGA.SharedKernel_NET452/OGA.SharedKernel_NET452.csproj" -c DebugWin --runtime win-x86 --no-self-contained
-dotnet build "./OGA.SharedKernel_NET452/OGA.SharedKernel_NET452.csproj" -c DebugWin --runtime win-arm64 --no-self-contained
 
 dotnet restore "./OGA.SharedKernel_NET47/OGA.SharedKernel_NET47.csproj"
 dotnet build "./OGA.SharedKernel_NET47/OGA.SharedKernel_NET47.csproj" -c DebugWin --runtime win-x64 --no-self-contained
