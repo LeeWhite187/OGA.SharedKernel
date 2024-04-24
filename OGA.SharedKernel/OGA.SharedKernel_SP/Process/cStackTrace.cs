@@ -2,6 +2,7 @@
 using System.Diagnostics;
 
 namespace OGA.SharedKernel.Process
+}
 {
     /* Stack Trace Class
      * This class provides a stack trace that maximizes traceability to a source file.
@@ -16,8 +17,10 @@ namespace OGA.SharedKernel.Process
      *  the recorded assembly, version, module, and IL offset.
      *  
      *  Here's an example stack trace:
-     *  at FLMarker:{Stacktrace_Scratchtesting.dll,9341bcc1-7fe6-4b64-a297-42a5f782553b,C:\Users\10024642\source\repos\Stacktrace_Scratchtesting\Stacktrace_Scratchtesting\Program.cs,Program,Main,15}
-     *  at FLMarker:{Stacktrace_Scratchtesting.dll,9341bcc1-7fe6-4b64-a297-42a5f782553b,C:\Users\10024642\source\repos\Stacktrace_Scratchtesting\Stacktrace_Scratchtesting\Program.cs,Program,ThrowError,36}
+     *  at FLMarker:{Stacktrace_Scratchtesting.dll,9341bcc1-7fe6-4b64-a297-42a5f782553b,C:\Users\glwhite\source\repos\Stacktrace_Scratchtesting\Stacktrace_Scratchtesting\Program.cs,Program,Main,15}
+     *  at FLMarker:{Stacktrace_Scratchtesting.dll,9341bcc1-7fe6-4b64-a297-42a5f782553b,C:\Users\glwhite\source\repos\Stacktrace_Scratchtesting\Stacktrace_Scratchtesting\Program.cs,Program,ThrowError,36}
+     *  at ILMarker:{System.Private.CoreLib.dll,28be434f-13d6-4768-8f5f-f1b9d2bc9827,DateTime,.ctor,MethodToken:0x60008b5,ILOffset:0x0}
+     *  at ILMarker:{System.Private.CoreLib.dll,28be434f-13d6-4768-8f5f-f1b9d2bc9827,DateTime,.ctor,MethodToken:0x60008b5,ILOffset:0x0}
      *  at ILMarker:{System.Private.CoreLib.dll,28be434f-13d6-4768-8f5f-f1b9d2bc9827,DateTime,.ctor,MethodToken:0x60008b5,ILOffset:0x0}
      *  at ILMarker:{System.Private.CoreLib.dll,28be434f-13d6-4768-8f5f-f1b9d2bc9827,ThrowHelper,ThrowArgumentOutOfRange_BadYearMonthDay,MethodToken:0x600181f,ILOffset:0xb}
 
@@ -318,5 +321,5 @@ namespace OGA.SharedKernel.Process
         }
 
         #endregion
+
     }
-}
