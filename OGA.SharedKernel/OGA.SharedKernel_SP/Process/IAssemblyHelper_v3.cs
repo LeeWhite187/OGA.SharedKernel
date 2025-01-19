@@ -6,10 +6,31 @@ namespace OGA.SharedKernel.Process
 {
     /// <summary>
     /// Assembly Helper class interface that exposes method calls used for searching process dependencies for controllers, map configs, exception types, config derivatives, etc.
+    /// This interface version adds a list for missing assemblies and one for duplicate assemblies.
     /// See the Wiki for details: https://wiki.galaxydump.com/link/57
     /// </summary>
-    public interface IAssemblyHelper
+    public interface IAssemblyHelper_v3 : IAssemblyHelper
     {
+        #region Public Properties
+
+        /// <summary>
+        /// Once Get_All_Assemblies() is called, this method contains a list of duplicate assemblies, if any exist.
+        /// </summary>
+        List<AssemblyDuplicationError> DuplicateAssemblies { get; }
+
+        /// <summary>
+        /// Once Get_All_Assemblies() is called, this method contains a list of missing reference assemblies.
+        /// </summary>
+        List<AssemblyData> MissingAssemblies { get; }
+
+        /// <summary>
+        /// Indicates the version of the AssemblyHelper instance.
+        /// </summary>
+        int Version { get; }
+
+        #endregion
+
+
         /// <summary>
         /// Returns a list of assembly names that are referenced by the process binary.
         /// </summary>

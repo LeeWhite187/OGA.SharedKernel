@@ -2,7 +2,6 @@
 using System.Diagnostics;
 
 namespace OGA.SharedKernel.Process
-}
 {
     /* Stack Trace Class
      * This class provides a stack trace that maximizes traceability to a source file.
@@ -323,3 +322,4 @@ namespace OGA.SharedKernel.Process
         #endregion
 
     }
+}

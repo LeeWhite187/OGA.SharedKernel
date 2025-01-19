@@ -29,6 +29,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Process\App_Data.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Process\AssemblyHelper_Base.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Process\cStackTrace.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Process\IAssemblyHelper_v3.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Process\IAssemblyHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)QueryHelpers\PaginationFilter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IUriService.cs" />
