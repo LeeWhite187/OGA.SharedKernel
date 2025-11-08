@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>35c51ab3-f006-43f8-909e-e43b0c1b0678</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>OGA.SharedKernel_Tests_SP</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)DateTimeUtils_Tests.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper_Classes\GenericSampleType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper_Classes\MultiGenericSampleType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper_Classes\SimplePOCO.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SerializationHelper_Tests.cs" />
+  </ItemGroup>
+</Project>

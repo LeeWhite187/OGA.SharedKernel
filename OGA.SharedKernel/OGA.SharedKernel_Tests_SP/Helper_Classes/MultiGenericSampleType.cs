@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OGA.SharedKernel_NET6_Tests.Helper_Classes
+namespace OGA.SharedKernel_Tests.Helper_Classes
 {
     public class MultiGenericSampleType<T1, T2>
     {

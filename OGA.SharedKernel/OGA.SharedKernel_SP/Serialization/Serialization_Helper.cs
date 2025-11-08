@@ -20,13 +20,17 @@ namespace OGA.SharedKernel.Serialization
         /// NOTE: The following two examples include escaped greater-than and less-than symbols, since this comment block is formatted XML.
         /// "List&lt;string&gt;"
         /// "DistributionWrapper&lt;SendCommand&gt;"
+        /// NOTE:   Passing a Nullable value type instance to this will not identity the instance as nullable.
+        ///         If you need to identity it as nullable, use the other method that accepts its type, directly.
         /// </summary>
         /// <param name="obj"></param>
         /// <param name="usefullnames"></param>
         /// <returns></returns>
         static public string GetType_forSerialization(object obj, bool usefullnames = false)
         {
-            return GetType_forSerialization(obj.GetType(), usefullnames);
+            var ot = obj.GetType();
+
+            return GetType_forSerialization(ot, usefullnames);
         }
 
         /// <summary>
@@ -45,9 +49,20 @@ namespace OGA.SharedKernel.Serialization
         {
             StringBuilder retType = new StringBuilder();
 
-            if (type.IsGenericType)
+            // This first block looks for nullable types...
+            if (type.IsGenericType && type.GetGenericTypeDefinition() == typeof(Nullable<>))
+            {
+                var inner = type.GetGenericArguments()[0];
+
+                var innerName = GetType_forSerialization(inner, usefullnames);
+
+                return $"{innerName}?";
+            }
+            // This next block looks for generic classes...
+            else if (type.IsGenericType)
             {
                 string[] parentType = new string[]{ };
+
                 if (usefullnames)
                     parentType = type.FullName != null ? type.FullName.Split('`') : type.Name.Split('`');
                 else
@@ -63,20 +78,15 @@ namespace OGA.SharedKernel.Serialization
                     // Let's make sure we get the argument list.
                     string arg = GetType_forSerialization(t, usefullnames);
                     if (argList.Length > 0)
-                    {
                         argList.AppendFormat(", {0}", arg);
-                    }
                     else
-                    {
                         argList.Append(arg);
-                    }
                 }
 
                 if (argList.Length > 0)
-                {
                     retType.AppendFormat("{0}<{1}>", parentType[0], argList.ToString());
-                }
             }
+            // Finally, we get a class or primitive type...
             else
             {
                 return (usefullnames ? type.ToString() : type.Name);
