@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.2.32630.192
+# Visual Studio Version 18
+VisualStudioVersion = 18.5.11723.231 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9C9FBD11-736C-40F6-8FD3-4D8E11E12BE9}"
 	ProjectSection(SolutionItems) = preProject
@@ -33,6 +33,10 @@ EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "OGA.SharedKernel_Tests_SP", "OGA.SharedKernel_Tests_SP\OGA.SharedKernel_Tests_SP.shproj", "{35C51AB3-F006-43F8-909E-E43B0C1B0678}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OGA.SharedKernel_NET5_Tests", "OGA.SharedKernel_NET5_Tests\OGA.SharedKernel_NET5_Tests.csproj", "{4AF98579-9D37-40E7-9731-A4748A9E4793}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OGA.SharedKernel_NET8", "OGA.SharedKernel_NET8\OGA.SharedKernel_NET8.csproj", "{F0B309B4-3074-4B0C-B98E-BBB994A756EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OGA.SharedKernel_NET8_Tests", "OGA.SharedKernel_NET8_Tests\OGA.SharedKernel_NET8_Tests.csproj", "{87EC86A6-D090-35EB-0B89-5C738C4622A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -152,6 +156,30 @@ Global
 		{4AF98579-9D37-40E7-9731-A4748A9E4793}.ReleaseLinux|Any CPU.Build.0 = Release|Any CPU
 		{4AF98579-9D37-40E7-9731-A4748A9E4793}.ReleaseWin|Any CPU.ActiveCfg = Release|Any CPU
 		{4AF98579-9D37-40E7-9731-A4748A9E4793}.ReleaseWin|Any CPU.Build.0 = Release|Any CPU
+		{F0B309B4-3074-4B0C-B98E-BBB994A756EB}.Debug|Any CPU.ActiveCfg = DebugWin|Any CPU
+		{F0B309B4-3074-4B0C-B98E-BBB994A756EB}.Debug|Any CPU.Build.0 = DebugWin|Any CPU
+		{F0B309B4-3074-4B0C-B98E-BBB994A756EB}.DebugLinux|Any CPU.ActiveCfg = DebugLinux|Any CPU
+		{F0B309B4-3074-4B0C-B98E-BBB994A756EB}.DebugLinux|Any CPU.Build.0 = DebugLinux|Any CPU
+		{F0B309B4-3074-4B0C-B98E-BBB994A756EB}.DebugWin|Any CPU.ActiveCfg = DebugWin|Any CPU
+		{F0B309B4-3074-4B0C-B98E-BBB994A756EB}.DebugWin|Any CPU.Build.0 = DebugWin|Any CPU
+		{F0B309B4-3074-4B0C-B98E-BBB994A756EB}.Release|Any CPU.ActiveCfg = ReleaseWin|Any CPU
+		{F0B309B4-3074-4B0C-B98E-BBB994A756EB}.Release|Any CPU.Build.0 = ReleaseWin|Any CPU
+		{F0B309B4-3074-4B0C-B98E-BBB994A756EB}.ReleaseLinux|Any CPU.ActiveCfg = ReleaseLinux|Any CPU
+		{F0B309B4-3074-4B0C-B98E-BBB994A756EB}.ReleaseLinux|Any CPU.Build.0 = ReleaseLinux|Any CPU
+		{F0B309B4-3074-4B0C-B98E-BBB994A756EB}.ReleaseWin|Any CPU.ActiveCfg = ReleaseWin|Any CPU
+		{F0B309B4-3074-4B0C-B98E-BBB994A756EB}.ReleaseWin|Any CPU.Build.0 = ReleaseWin|Any CPU
+		{87EC86A6-D090-35EB-0B89-5C738C4622A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87EC86A6-D090-35EB-0B89-5C738C4622A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87EC86A6-D090-35EB-0B89-5C738C4622A0}.DebugLinux|Any CPU.ActiveCfg = Debug|Any CPU
+		{87EC86A6-D090-35EB-0B89-5C738C4622A0}.DebugLinux|Any CPU.Build.0 = Debug|Any CPU
+		{87EC86A6-D090-35EB-0B89-5C738C4622A0}.DebugWin|Any CPU.ActiveCfg = Debug|Any CPU
+		{87EC86A6-D090-35EB-0B89-5C738C4622A0}.DebugWin|Any CPU.Build.0 = Debug|Any CPU
+		{87EC86A6-D090-35EB-0B89-5C738C4622A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87EC86A6-D090-35EB-0B89-5C738C4622A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87EC86A6-D090-35EB-0B89-5C738C4622A0}.ReleaseLinux|Any CPU.ActiveCfg = Release|Any CPU
+		{87EC86A6-D090-35EB-0B89-5C738C4622A0}.ReleaseLinux|Any CPU.Build.0 = Release|Any CPU
+		{87EC86A6-D090-35EB-0B89-5C738C4622A0}.ReleaseWin|Any CPU.ActiveCfg = Release|Any CPU
+		{87EC86A6-D090-35EB-0B89-5C738C4622A0}.ReleaseWin|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -168,6 +196,8 @@ Global
 		{2F6CCE5D-1BF2-4863-B6BC-B76F2CDC13E0} = {6128A467-3392-4066-AA6D-9091474D5457}
 		{35C51AB3-F006-43F8-909E-E43B0C1B0678} = {6128A467-3392-4066-AA6D-9091474D5457}
 		{4AF98579-9D37-40E7-9731-A4748A9E4793} = {6128A467-3392-4066-AA6D-9091474D5457}
+		{F0B309B4-3074-4B0C-B98E-BBB994A756EB} = {58491899-49A6-4EF9-8584-B04FE8EB8C72}
+		{87EC86A6-D090-35EB-0B89-5C738C4622A0} = {6128A467-3392-4066-AA6D-9091474D5457}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {40937BB3-C40A-4A8C-8D8B-8BAB34630A08}
@@ -181,8 +211,10 @@ Global
 		OGA.SharedKernel_Tests_SP\OGA.SharedKernel_Tests_SP.projitems*{4af98579-9d37-40e7-9731-a4748a9e4793}*SharedItemsImports = 5
 		OGA.SharedKernel_Tests_SP\OGA.SharedKernel_Tests_SP.projitems*{559db5c7-1c47-4f75-afa9-b63082e02dae}*SharedItemsImports = 5
 		OGA.SharedKernel_SP\OGA.SharedKernel_SP.projitems*{60defcad-5bfc-4f61-b64f-833e7c5ddf16}*SharedItemsImports = 13
+		OGA.SharedKernel_Tests_SP\OGA.SharedKernel_Tests_SP.projitems*{87ec86a6-d090-35eb-0b89-5c738c4622a0}*SharedItemsImports = 5
 		OGA.SharedKernel_SP\OGA.SharedKernel_SP.projitems*{9b7a4f31-e68e-4c2f-ae5e-98f7329373b7}*SharedItemsImports = 5
 		OGA.SharedKernel_SP\OGA.SharedKernel_SP.projitems*{d74cfec4-cee3-48ad-a3ae-2dce21aaa61e}*SharedItemsImports = 5
 		OGA.SharedKernel_SP\OGA.SharedKernel_SP.projitems*{e551a3d7-46b3-4b4b-b056-ba9d1fd1546b}*SharedItemsImports = 5
+		OGA.SharedKernel_SP\OGA.SharedKernel_SP.projitems*{f0b309b4-3074-4b0c-b98e-bbb994a756eb}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

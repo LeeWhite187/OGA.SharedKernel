@@ -36,6 +36,7 @@ It contains multiple projects, one for each of the following frameworks:
 * NET 5
 * NET 6
 * NET 7
+* NET 8
 
 And, the output nuget package includes runtimes targets for:
 * linux-any
